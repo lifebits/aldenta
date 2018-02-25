@@ -6,9 +6,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "run-s build:client build:aot build:server",
-    "build:client": "ng build -prod --build-optimizer --app 0",
+    "build:client": "ng build --prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",
+    "build:ghpages": "ng build --prod --build-optimizer --base-href /aldenta-front/ --app 0",
+    "deploy:ghpages": "run-s build:ghpages ngh --no-silent --dist=dist/browser",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
