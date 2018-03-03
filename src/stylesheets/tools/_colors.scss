@@ -1,0 +1,75 @@
+$theme-color-key: 'base' !default;
+
+$theme-colors: (
+	'primary': (
+		'base': #78bd40,
+		'light': #455071,
+		'dark': #2f364d,
+	),
+	'secondary': (
+		'base': #5F9EA0,
+		'light': #70c7d8
+	),
+	'success': (
+		'base': #4CAF50
+	),
+	'warn': (
+		'base': #F44336,
+		'light': #FF8A80
+	),
+	'font': (
+		'base': #000000,
+		'light': #ffffff,
+		'dark': #42505C
+	),
+	'standart': (
+		'white': #ffffff,
+		'light': #C9C9C9,
+		'black': #000000,
+		'blue': #2CA6D4,
+		'gray': #E6E6E6,
+		'gray2': #B5C2CC,
+		'darkGray': #697680,
+		'lightGray': #D8DCDF,
+		'green': #80C67C,
+		'greenLight': #AADAA6,
+		'greenDark': #3E8A37
+	)
+);
+
+$main-opacity: (
+	'light': 0.8,
+	'dark': 0.4,
+);
+
+@function theme-colors(
+	$name: 'primary',
+    $variant: $theme-color-key,
+    $opacity: 1
+) {
+	$color: null;
+
+	// Get the color spectrum
+	$color-spectrum: map-get($theme-colors, $name);
+
+	// Get the color variant
+	@if $color-spectrum {
+		$color: map-get($color-spectrum, $variant);
+	}
+
+	// Get the alpha setting
+	$alpha: if(type-of($opacity) == 'number', $opacity, map-get($main-opacity, $opacity));
+
+	// Set the alpha of the color
+	@if $alpha {
+		$color: rgba($color, $alpha);
+	}
+
+	@return $color;
+}
+
+/*
+background-color: theme-colors('primary');
+background-color: theme-colors('primary', 'light');
+background-color: theme-colors('primary', $opacity: 'light');
+*/

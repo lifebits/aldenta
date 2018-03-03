@@ -9,8 +9,6 @@ export class HeaderNavigationComponent implements OnInit {
 
   navElementsList = [
     {
-      name: 'Услуги'
-    },{
       name: 'Рассрочка'
     },{
       name: 'Цены'

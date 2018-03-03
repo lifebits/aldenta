@@ -1,0 +1,41 @@
+@import "../../../stylesheets/tools/colors";
+
+.popup-button {
+    position: relative;
+    height: 60px;
+    width: 170px;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: theme-colors('primary');
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        border: 5px solid transparent;
+        border-right: 5px solid white;
+        border-bottom: 5px solid white;
+        bottom: 12px;
+        right: 20px;
+    }
+}
+
+.flex-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+svg {
+    height: 32px;
+    width: 32px;
+    margin: 0 14px 0 8px;
+}
