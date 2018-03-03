@@ -26,8 +26,8 @@ export class AppComponent implements OnInit {
         .get('https://dog.ceo/api/breeds/list/all')
         .subscribe(response => {
           this.dogs = response;
-          this.state.set(DOGS_KEY,response as any);
-        })
+          this.state.set(DOGS_KEY, response as any);
+        });
     }
   }
 

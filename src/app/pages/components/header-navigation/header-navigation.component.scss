@@ -1,0 +1,13 @@
+nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    div {
+        margin-right: 10px;
+        line-height: 2;
+        text-transform: uppercase;
+    }
+}
