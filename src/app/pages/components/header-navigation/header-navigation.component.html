@@ -1,6 +1,13 @@
 <nav>
-  <app-popup-menu style="margin-right: 20px;"></app-popup-menu>
-  <div *ngFor="let navItem of navElementsList">
-    {{ navItem.name }}
+  <app-popup-menu style="margin-right: 20px;">
+    <ul>
+      <li *ngFor="let serviceItem of serviceList">
+        <div [innerHTML]="serviceItem.svg"></div>
+        <a>{{ serviceItem.title }}</a>
+      </li>
+    </ul>
+  </app-popup-menu>
+  <div *ngFor="let navItem of navigationList" class="nav-item">
+    {{ navItem.title }}
   </div>
 </nav>

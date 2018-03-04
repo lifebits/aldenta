@@ -1,13 +1,52 @@
+@import "../../../../stylesheets/tools/colors";
+
 nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+
+  .nav-item {
+    padding: 0 20px;
+    text-transform: uppercase;
+  }
+}
+
+:host /deep/ ul {
+  padding: 0 10px;
+  list-style-type: none;
+
+  li {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 60px;
 
-    div {
-        padding: 0 20px;
-        text-transform: uppercase;
+    svg {
+      margin: 0 8px;
+      fill: #666666;
     }
+
+    a {
+      width: 100%;
+      margin-left: 6px;
+      line-height: 2.4;
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        fill: theme-colors('primary');
+      }
+
+      a {
+        color: theme-colors('primary', 'dark');
+      }
+    }
+  }
 }

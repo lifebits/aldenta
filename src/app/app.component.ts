@@ -22,12 +22,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.dogs = this.state.get(DOGS_KEY, null as any);
     if (!this.dogs) {
-      this.http
+      /*this.http
         .get('https://dog.ceo/api/breeds/list/all')
         .subscribe(response => {
           this.dogs = response;
           this.state.set(DOGS_KEY, response as any);
-        });
+        });*/
     }
   }
 

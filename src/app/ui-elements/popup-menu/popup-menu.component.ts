@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-popup-menu',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopupMenuComponent implements OnInit {
 
-  constructor() { }
+  isActive?: boolean;
 
-  ngOnInit() {
+  constructor(
+    private elementRef: ElementRef) {
+  }
+
+  @HostListener('window:click', ['$event'])
+  keyboardInput(e: any) {
+    if (this.isActive && !this.elementRef.nativeElement.contains(e.target)) {
+      this.toggleActiveStatus();
+    }
+  }
+
+  ngOnInit() { }
+
+  toggleActiveStatus(): void {
+    this.isActive = !this.isActive;
   }
 
 }
