@@ -10,7 +10,7 @@
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",
     "build:ghpages": "ng build --prod --build-optimizer --base-href /aldenta-front/ --app 0",
-    "deploy:ghpages": "ngh --repo=https://8a14ffb9287e7f7d78cc0751b09b5f64f1b29586@github.com/lifebits/aldenta-front.git --no-silent --dir dist/browser",
+    "deploy:ghpages": "ngh --repo=https://6616708d15cf5d1235dd823156b906c73844cb18@github.com/lifebits/aldenta-front.git --no-silent --dir dist/browser",
     "ghpages": "run-s build:ghpages deploy:ghpages",
     "test": "ng test",
     "lint": "ng lint",
