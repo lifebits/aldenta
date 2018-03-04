@@ -11,7 +11,6 @@ const DOGS_KEY = makeStateKey('dogs');
 })
 export class AppComponent implements OnInit {
 
-  title = 'app';
   dogs?: any;
 
   constructor(

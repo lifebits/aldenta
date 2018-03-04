@@ -68,6 +68,14 @@ export class HeaderNavigationComponent implements OnInit {
       title: 'Ортодонтия',
       link: '',
       svg: this.sanitizer.bypassSecurityTrustHtml(DEF_SVG)
+    }, {
+      title: 'Эстетическая стоматология',
+      link: '',
+      svg: this.sanitizer.bypassSecurityTrustHtml(DEF_SVG)
+    }, {
+      title: 'Услуги профессиональной гигиены рта',
+      link: '',
+      svg: this.sanitizer.bypassSecurityTrustHtml(DEF_SVG)
     }
   ];
 
