@@ -22,6 +22,11 @@
         "styles.scss"
       ],
       "scripts": [],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "./"
+        ]
+      },
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -40,6 +45,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "scripts": [],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "./"
+        ]
+      },
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
