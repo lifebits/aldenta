@@ -1,0 +1,69 @@
+@import "./tools/colors";
+
+a.btn {
+  z-index: 0;
+  cursor: pointer;
+  position: relative;
+  min-width: 3rem;
+  max-width: 15rem;
+  padding: .6rem .5rem;
+  font-size: .8rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  letter-spacing: .12em;
+  border: 1px solid;
+  border-radius: .125rem;
+  user-select: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+
+  &.btn-lg {
+    padding: 1rem 2rem;
+
+
+  }
+
+  &.btn-primary {
+    color: #ffffff;
+    background-color: theme-colors('primary');
+    border-color: theme-colors('primary');
+
+    &:hover {
+      background-color: theme-colors('primary', 'dark');
+    }
+
+    &:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    &:active {
+      border-top: 1px solid #333333;
+
+      &:before {
+        background-color: #555555;
+      }
+    }
+  }
+
+  &.btn-success {
+
+  }
+
+  &.btn-warning {
+
+  }
+
+
+
+}

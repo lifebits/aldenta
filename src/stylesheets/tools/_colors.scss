@@ -3,7 +3,7 @@ $theme-color-key: 'base' !default;
 $theme-colors: (
 	'primary': (
 		'base': #78bd40,
-		'light': #455071,
+		'light': #bcdea1,
 		'dark': #509b2b,
 	),
 	'secondary': (
@@ -18,22 +18,13 @@ $theme-colors: (
 		'light': #FF8A80
 	),
 	'font': (
-		'base': #000000,
+		'base': #222222,
 		'light': #ffffff,
 		'dark': #42505C
 	),
 	'standart': (
-		'white': #ffffff,
-		'light': #C9C9C9,
-		'black': #000000,
-		'blue': #2CA6D4,
-		'gray': #E6E6E6,
-		'gray2': #B5C2CC,
-		'darkGray': #697680,
-		'lightGray': #D8DCDF,
-		'green': #80C67C,
-		'greenLight': #AADAA6,
-		'greenDark': #3E8A37
+		'grayStandart': #f5f5f5,
+    'grayLight': #D8DCDF,
 	)
 );
 
