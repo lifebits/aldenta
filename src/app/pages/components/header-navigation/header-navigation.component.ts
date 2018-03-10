@@ -27,6 +27,9 @@ const NAV_LIST = [
     title: 'Отзывы',
     link: ''
   }, {
+    title: 'Учебный центр',
+    link: ''
+  }, {
     title: 'О Компании',
     link: ''
   }

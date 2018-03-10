@@ -1,4 +1,4 @@
-@import "../../../stylesheets/tools/colors";
+@import "stylesheets/tools/colors";
 
 .flex-wrapper {
   position: relative;
@@ -41,6 +41,7 @@
 }
 
 .popup-menu {
+  z-index: 100;
   position: absolute;
   min-width: 260px;
   min-height: 50px;

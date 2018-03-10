@@ -1,0 +1,14 @@
+<section>
+  <h2>{{ mainDirection.title }}</h2>
+  <div [innerHTML]="mainDirection.text"></div>
+  <div class="flex-row" style="margin-top: 40px;">
+    <div *ngFor="let direction of mainDirection.directionList" class="wrap-direction">
+      <div class="direction">
+        <div [innerHTML]="direction.svg" class="icon"></div>
+        <div>
+          <a [routerLink]="direction.routerLink">{{ direction.name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

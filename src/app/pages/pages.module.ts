@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { UiElementsModule } from '../ui-elements/ui-elements.module';
 import { IndexPageModule } from './index-page/index-page.module';
+import { ServicesPageModule } from './services-page/services-page.module';
 
 import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
 
@@ -10,7 +11,8 @@ import { HeaderNavigationComponent } from './components/header-navigation/header
   imports: [
     CommonModule,
     UiElementsModule,
-    IndexPageModule
+    IndexPageModule,
+    ServicesPageModule
   ],
   declarations: [
     HeaderNavigationComponent

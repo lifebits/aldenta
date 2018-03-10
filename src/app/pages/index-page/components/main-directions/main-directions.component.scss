@@ -1,0 +1,48 @@
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #efefef;
+
+  .wrap-direction {
+    flex-grow: 1;
+    position: relative;
+    width: 33%;
+    height: 220px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+
+    .direction {
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      background-color: white;
+      border: 1px solid #f5f5f5;
+      border-radius: 3px;
+
+      &:hover {
+        z-index: 10;
+        transform: scale(1.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+    }
+  }
+}
+
+.icon {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto;
+  padding: 30px 0 14px;
+}
+
+a {
+  font-size: .9rem;
+  color: #333333;
+  text-decoration: none;
+  text-transform: uppercase;
+}
