@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4100",
-    "build": "run-s build:client build:aot build:server",
+    "serve:universal": "node dist/server.js",
+    "build:universal": "run-s build:client build:aot build:server",
     "build:client": "ng build --prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",

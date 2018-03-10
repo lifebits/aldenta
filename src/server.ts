@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone-node';
-import { renderModuleFactory } from '@angular/platform-server'
-import { enableProdMode } from '@angular/core'
+import { renderModuleFactory } from '@angular/platform-server';
+import { enableProdMode } from '@angular/core';
 import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
@@ -24,8 +24,9 @@ app.engine('html', (_, options, callback) => {
 });
 
 app.set('view engine', 'html');
-app.set('views', 'src')
+app.set('views', 'src');
 
+// Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 
 app.get('*', (req, res) => {
