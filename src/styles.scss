@@ -6,6 +6,7 @@
 @import "stylesheets/normalize.scss";
 
 @import "stylesheets/headers.scss";
+@import "stylesheets/content.scss";
 @import "stylesheets/buttons.scss";
 
 body {
@@ -29,29 +30,4 @@ body {
   position: relative;
   overflow-x: hidden;
   min-height: 300px;
-}
-
-.content-block {
-  position: relative;
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.content-block-right {
-  position: relative;
-  min-height: 200px;
-  width: 1100px;
-  margin: 0 auto;
-  background-color: white;
-
-  &:before {
-    z-index: -1;
-    position: absolute;
-    content: '';
-    right: 0;
-    height: 100%;
-    width: 50%;
-    transform: translate(100%, 0);
-    background-color: white;
-  }
 }

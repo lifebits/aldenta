@@ -22,6 +22,8 @@ export class DiscountsSliderComponent implements OnInit {
       text: 'Установка керамических коронок под ключ за 14000 рублей до 31 марта',
       imageUrl: 'assets/img/discounts/slide-2.jpg'
     }, {
+      title: 'Имплантация зубов - 40000 руб. "под ключ"',
+      text: 'Имплант + формирователь + работа врача + консультация + план лечения + обследование',
       imageUrl: 'assets/img/discounts/slide-3.jpg'
     }, {
       imageUrl: 'assets/img/discounts/slide-4.jpg'

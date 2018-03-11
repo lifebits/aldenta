@@ -45,11 +45,12 @@ export class SwiperComponent implements OnInit, AfterViewInit {
     },
   };
 
-    constructor() {
+  constructor() {
+
   }
 
   ngOnInit() {
-    // console.log(this.swiper);
+
   }
 
   ngAfterViewInit() {
