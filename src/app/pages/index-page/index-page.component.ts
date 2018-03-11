@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-index-page',
   templateUrl: './index-page.component.html',
   styleUrls: ['./index-page.component.scss']
 })
-export class IndexPageComponent implements OnInit {
-
-  title = 'app';
+export class IndexPageComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
   }
 
 }
