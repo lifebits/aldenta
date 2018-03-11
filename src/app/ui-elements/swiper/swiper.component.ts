@@ -27,7 +27,7 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
   swiper: Swiper;
 
-  @Input() type?: 'base' | 'custom-progress-pagination' = 'custom-progress-pagination';
+  @Input() type?: 'base' | 'custom-pagination' = 'custom-pagination';
 
   @Input() options: SwiperOptions = {
     slidesPerView: 'auto',

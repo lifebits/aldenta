@@ -16,22 +16,14 @@
   align-items: center;
 
   img {
-    height: 100%;
+    width: 100%;
   }
 }
 
-
-
-.custom-progress-pagination {
+.custom-pagination {
 
   &.swiper-container {
-    // padding: 36px;
+    padding: 40px 0;
   }
 
-  .swiper-pagination-progressbar {
-    top: auto;
-    bottom: 0;
-    left: 20%;
-    width: 60%;
-  }
 }
