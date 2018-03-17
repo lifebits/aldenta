@@ -1,9 +1,13 @@
 @import "./tools/colors";
 
-a.btn {
+.btn {
   z-index: 0;
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
   min-width: 3rem;
   max-width: 15rem;
   padding: .6rem .5rem;
@@ -16,12 +20,29 @@ a.btn {
   border-radius: .125rem;
   user-select: none;
 
+  .icon {
+    display: inline-block;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    transform: translate3d(0,-.08333rem,0);
+
+    &>* {
+      height: 100%;
+      width: 100%;
+      display: block;
+      pointer-events: none;
+    }
+  }
+
   &:active,
   &:focus {
     outline: none;
   }
 
   &.btn-lg {
+    max-width: 20rem;
     padding: 1rem 2rem;
   }
 

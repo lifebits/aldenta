@@ -32,7 +32,7 @@ export class OurTechnologiesComponent implements OnInit {
         title: 'Современные методы лечения',
         svg: this.sanitizer.bypassSecurityTrustHtml(DEF_SVG)
       }, {
-        title: 'Лечение без боли',
+        title: 'Бережное лечение без боли',
         svg: this.sanitizer.bypassSecurityTrustHtml(DEF_SVG)
       }, {
         title: 'Анатомическая реставрация',

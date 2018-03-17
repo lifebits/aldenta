@@ -1,0 +1,19 @@
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text {
+  margin-top: 50px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7 ;
+}
+
+img {
+  display: block;
+}
+

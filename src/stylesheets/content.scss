@@ -14,15 +14,13 @@
   }
 }
 
-/*.content-block-right {
+.content-block-right {
   position: relative;
-  min-height: 200px;
-  width: 1300px;
-  margin: 0 auto;
-  background-color: white;
+  top: -100px;
 
-  @include oldDesktop {
-    width: 1100px;
+  .content-block{
+    padding: 50px 50px 0;
+    background-color: white;
   }
 
   &:before {
@@ -32,20 +30,6 @@
     right: 0;
     height: 100%;
     width: 50%;
-    transform: translate(100%, 0);
     background-color: white;
   }
 }
-
-.content-block-test {
-  &:before {
-    z-index: -1;
-    position: absolute;
-    content: '';
-    right: 0;
-    height: 100%;
-    width: 50%;
-    transform: translate(100%, 0);
-    background-color: white;
-  }
-}*/

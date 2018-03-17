@@ -9,6 +9,7 @@ import { SingleBannerComponent } from './components/single-banner/single-banner.
 import { MainDirectionsComponent } from './components/main-directions/main-directions.component';
 import { DiscountsSliderComponent } from './components/discounts-slider/discounts-slider.component';
 import { OurTechnologiesComponent } from './components/our-technologies/our-technologies.component';
+import { SpeakingOfClientsComponent } from './components/speaking-of-clients/speaking-of-clients.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { OurTechnologiesComponent } from './components/our-technologies/our-tech
     SingleBannerComponent,
     MainDirectionsComponent,
     DiscountsSliderComponent,
-    OurTechnologiesComponent
+    OurTechnologiesComponent,
+    SpeakingOfClientsComponent
   ]
 })
 export class IndexPageModule { }

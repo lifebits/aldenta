@@ -1,0 +1,28 @@
+<section>
+
+  <div class="flex-row">
+
+    <div style="width: 100%; padding-right: 60px;">
+      <h2>{{ data.title }}</h2>
+      <div class="h2-subtitle">{{ data.subtitle }}</div>
+      <div [innerHTML]="data.text" class="text"></div>
+      <div style="margin-top: 40px;">
+        <button class="btn btn-primary btn-lg">
+          Показать весь текст
+          <div class="icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="#ffffff" d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div style="min-width: 400px;">
+      <img src="assets/img/cheef-doctor.jpg">
+    </div>
+
+  </div>
+
+
+</section>

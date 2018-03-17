@@ -1,3 +1,5 @@
+@import "stylesheets/tools/media";
+
 .flex-row {
   position: relative;
   display: flex;
@@ -28,6 +30,20 @@
     font-size: 1.1rem;
     font-weight: 400;
     color: #777777;
+  }
+
+  @include oldDesktop {
+    width: 180px;
+    height: 180px;
+    padding: 18px;
+
+    .svg-wrapper {
+      padding: 14px 0 6px;
+    }
+
+    .title {
+      font-size: 1rem;
+    }
   }
 
 }
