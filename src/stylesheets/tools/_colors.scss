@@ -1,24 +1,26 @@
-$theme-color-key: 'base' !default;
+$theme-color-key: '400' !default;
 
 $theme-colors: (
 	'primary': (
-		'base': #78bd40,
-		'light': #bcdea1,
-		'dark': #509b2b,
+    '200': #bcdea1,
+    '400': #78bd40,
+    '600': #509b2b,
 	),
 	'secondary': (
-		'base': #5F9EA0,
-		'light': #70c7d8
+    '400': #ffcc00
 	),
+  'tertiary': (
+    '400': #f5f5f5
+  ),
 	'success': (
-		'base': #4CAF50
+		'400': #4CAF50
 	),
 	'warn': (
-		'base': #F44336,
+		'400': #F44336,
 		'light': #FF8A80
 	),
 	'font': (
-		'base': #222222,
+		'400': #222222,
 		'light': #ffffff,
 		'dark': #42505C
 	),
