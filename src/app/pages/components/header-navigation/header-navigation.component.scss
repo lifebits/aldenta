@@ -1,4 +1,4 @@
-@import "../../../../stylesheets/tools/colors";
+@import "stylesheets/tools/colors";
 
 nav {
   position: relative;
@@ -47,7 +47,7 @@ nav {
       }
 
       a {
-        color: theme-colors('primary', 'dark');
+        color: theme-colors('primary', '600');
       }
     }
   }

@@ -8,6 +8,7 @@ import { IndexPageComponent } from './index-page.component';
 import { SingleBannerComponent } from './components/single-banner/single-banner.component';
 import { MainDirectionsComponent } from './components/main-directions/main-directions.component';
 import { DiscountsSliderComponent } from './components/discounts-slider/discounts-slider.component';
+import { OurTechnologiesComponent } from './components/our-technologies/our-technologies.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { DiscountsSliderComponent } from './components/discounts-slider/discount
     IndexPageComponent,
     SingleBannerComponent,
     MainDirectionsComponent,
-    DiscountsSliderComponent
+    DiscountsSliderComponent,
+    OurTechnologiesComponent
   ]
 })
 export class IndexPageModule { }

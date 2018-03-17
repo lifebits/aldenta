@@ -8,9 +8,13 @@
   @include oldDesktop {
     width: 1000px;
   }
+
+  &.margin-top {
+    top: -80px;
+  }
 }
 
-.content-block-right {
+/*.content-block-right {
   position: relative;
   min-height: 200px;
   width: 1300px;
@@ -32,3 +36,16 @@
     background-color: white;
   }
 }
+
+.content-block-test {
+  &:before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    right: 0;
+    height: 100%;
+    width: 50%;
+    transform: translate(100%, 0);
+    background-color: white;
+  }
+}*/

@@ -1,0 +1,12 @@
+<section style="padding: 40px 0;">
+  <h2>{{ technologies.title }}</h2>
+  <div class="h2-subtitle">
+    {{ technologies.text }}
+  </div>
+  <div class="flex-row" style="padding: 50px 0 40px;">
+    <div *ngFor="let item of technologies.technology" class="tech-item">
+      <div class="svg-wrapper" [innerHTML]="item.svg"></div>
+      <div class="title">{{ item.title }}</div>
+    </div>
+  </div>
+</section>

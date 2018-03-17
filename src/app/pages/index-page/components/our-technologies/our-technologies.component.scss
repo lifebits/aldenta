@@ -1,0 +1,33 @@
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+:host /deep/ .tech-item {
+  width: 220px;
+  height: 220px;
+  padding: 24px;
+  border: 6px solid #78bd40;
+  border-radius: 50%;
+
+  .svg-wrapper {
+    padding: 30px 0 10px;
+    text-align: center;
+
+    svg {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #777777;
+  }
+
+}

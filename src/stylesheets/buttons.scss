@@ -21,11 +21,8 @@ a.btn {
     outline: none;
   }
 
-
   &.btn-lg {
     padding: 1rem 2rem;
-
-
   }
 
   &.btn-primary {
@@ -34,7 +31,7 @@ a.btn {
     border-color: theme-colors('primary');
 
     &:hover {
-      background-color: theme-colors('primary', 'dark');
+      background-color: theme-colors('primary', '600');
     }
 
     &:before {
