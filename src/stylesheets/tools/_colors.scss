@@ -32,7 +32,8 @@ $theme-colors: (
 
 $main-opacity: (
 	'light': 0.8,
-	'dark': 0.4,
+ 'standart': 0.5,
+     'dark': 0.4,
 );
 
 @function theme-colors(

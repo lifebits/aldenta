@@ -27,8 +27,6 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
   swiper: Swiper;
 
-  // @Input() type?: 'base' | 'custom-pagination' = 'custom-pagination';
-
   @Input() defaultNavigation = false;
   @Input() options?: SwiperOptions;
 

@@ -28,14 +28,23 @@
   text-align: left;
 }
 
+.swipe-logo {
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  height: 32px;
+  width: 32px;
+  fill: theme-colors('tertiary', $opacity: 'standart');
+}
+
 :host /deep/ .swiper-container {
-  padding: 40px 0;
+  padding: 46px 0;
 
   .swiper-pagination-progressbar {
     top: unset;
-    bottom: 0;
-    left: 15%;
-    right: 15%;
+    bottom: 12px;
+    left: 18%;
+    right: 18%;
     width: auto;
     height: 3px;
   }
@@ -44,25 +53,24 @@
     background-color: theme-colors('secondary');
   }
 
-  /*.swiper-button-prev, .swiper-button-next {
-    z-index: 1;
+  .swiper-custom-next, .swiper-custom-prev {
+    width: 32px;
+    height: 32px;
     top: unset;
     bottom: 0;
-    width: 11px;
-    height: 18px;
-    background-size: 11px 18px;
+    transform: unset;
+    fill: theme-colors('primary');
+    background-color: theme-colors('tertiary', $opacity: 'standart');
+  }
 
-    &:after {
-      z-index: -1;
-      content: '';
-      position: absolute;
-      left: -6px;
-      right: -6px;
-      top: -3px;
-      bottom: -3px;
-      background-color: theme-colors('tertiary');
-    }
-  }*/
+  .swiper-custom-next {
+    right: 60px;
+  }
+
+  .swiper-custom-prev {
+    left: unset;
+    right: 100px;
+  }
 
   .swiper-slide-active {
     .content-wrapper {
