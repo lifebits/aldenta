@@ -12,6 +12,8 @@ import { OurTechnologiesComponent } from './components/our-technologies/our-tech
 import { SpeakingOfClientsComponent } from './components/speaking-of-clients/speaking-of-clients.component';
 import { RecentReviewsSliderComponent } from './components/recent-reviews-slider/recent-reviews-slider.component';
 
+import { IndexPageService } from './index-page.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,6 +28,9 @@ import { RecentReviewsSliderComponent } from './components/recent-reviews-slider
     OurTechnologiesComponent,
     SpeakingOfClientsComponent,
     RecentReviewsSliderComponent
+  ],
+  providers: [
+    IndexPageService
   ]
 })
 export class IndexPageModule { }

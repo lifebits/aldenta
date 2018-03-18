@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
+import {ReviewsResponse} from '../models/social.interface';
 
 const DOGS_KEY = makeStateKey('dogs');
 
@@ -23,6 +24,11 @@ export class AppComponent implements OnInit {
     if (!this.dogs) {
       /*this.http
         .get('https://dog.ceo/api/breeds/list/all')
+        .subscribe(response => {
+          this.dogs = response;
+          this.state.set(DOGS_KEY, response as any);
+        });*/
+      /*this.http.get<ReviewsResponse>('http://localhost:3200/assets/mocks/recent-reviews.json')
         .subscribe(response => {
           this.dogs = response;
           this.state.set(DOGS_KEY, response as any);
