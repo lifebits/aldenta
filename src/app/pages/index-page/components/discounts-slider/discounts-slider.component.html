@@ -1,5 +1,5 @@
-<section style="padding-bottom: 20px;">
-  <app-swiper>
+<section>
+  <app-swiper [options]="options">
     <div *ngFor="let discount of discounts" class="swiper-slide">
       <img [src]="discount.imageUrl">
       <div class="slide-wrapper">

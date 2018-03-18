@@ -12,9 +12,9 @@ export interface SwiperOptions {
     clickable?: boolean;
     type?: 'progressbar';
   };
-  navigation: {
-    nextEl: '.swiper-button-next';
-    prevEl: '.swiper-button-prev';
+  navigation?: {
+    nextEl: '.swiper-button-next' | '.swiper-custom-next';
+    prevEl: '.swiper-button-prev' | '.swiper-custom-prev';
   };
 }
 
@@ -27,23 +27,10 @@ export class SwiperComponent implements OnInit, AfterViewInit {
 
   swiper: Swiper;
 
-  @Input() type?: 'base' | 'custom-pagination' = 'custom-pagination';
+  // @Input() type?: 'base' | 'custom-pagination' = 'custom-pagination';
 
-  @Input() options: SwiperOptions = {
-    slidesPerView: 'auto',
-    loop: true,
-    centeredSlides: true,
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      // type: 'progressbar'
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  };
+  @Input() defaultNavigation = false;
+  @Input() options?: SwiperOptions;
 
   constructor() {
 

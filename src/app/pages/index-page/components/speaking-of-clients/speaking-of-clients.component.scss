@@ -6,11 +6,23 @@
   align-items: flex-start;
 }
 
-.text {
+:host /deep/ .text {
   margin-top: 50px;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7 ;
+
+  p:not(:first-child) {
+    display: none;
+  }
+
+  &.extended-mode {
+    padding-bottom: 30px;
+
+    p {
+      display: block;
+    }
+  }
 }
 
 img {

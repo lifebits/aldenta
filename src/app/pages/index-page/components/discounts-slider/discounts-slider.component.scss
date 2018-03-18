@@ -1,3 +1,5 @@
+@import 'stylesheets/tools/colors';
+
 .swiper-slide {
   width: 500px;
   height: 249px;
@@ -26,12 +28,49 @@
   text-align: left;
 }
 
-:host /deep/ .swiper-slide-active {
-  .content-wrapper {
-    color: white;
-    border-color: white;
+:host /deep/ .swiper-container {
+  padding: 40px 0;
+
+  .swiper-pagination-progressbar {
+    top: unset;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    width: auto;
+    height: 3px;
   }
-  .slide-wrapper {
-    background-color: rgba(120,189,64,0.7) !important;
+
+  .swiper-pagination-progressbar-fill {
+    background-color: theme-colors('secondary');
+  }
+
+  /*.swiper-button-prev, .swiper-button-next {
+    z-index: 1;
+    top: unset;
+    bottom: 0;
+    width: 11px;
+    height: 18px;
+    background-size: 11px 18px;
+
+    &:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      left: -6px;
+      right: -6px;
+      top: -3px;
+      bottom: -3px;
+      background-color: theme-colors('tertiary');
+    }
+  }*/
+
+  .swiper-slide-active {
+    .content-wrapper {
+      color: white;
+      border-color: white;
+    }
+    .slide-wrapper {
+      background-color: rgba(120,189,64,0.7) !important;
+    }
   }
 }

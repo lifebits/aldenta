@@ -10,6 +10,7 @@ import { MainDirectionsComponent } from './components/main-directions/main-direc
 import { DiscountsSliderComponent } from './components/discounts-slider/discounts-slider.component';
 import { OurTechnologiesComponent } from './components/our-technologies/our-technologies.component';
 import { SpeakingOfClientsComponent } from './components/speaking-of-clients/speaking-of-clients.component';
+import { RecentReviewsSliderComponent } from './components/recent-reviews-slider/recent-reviews-slider.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { SpeakingOfClientsComponent } from './components/speaking-of-clients/spe
     MainDirectionsComponent,
     DiscountsSliderComponent,
     OurTechnologiesComponent,
-    SpeakingOfClientsComponent
+    SpeakingOfClientsComponent,
+    RecentReviewsSliderComponent
   ]
 })
 export class IndexPageModule { }

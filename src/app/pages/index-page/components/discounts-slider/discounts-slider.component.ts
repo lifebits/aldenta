@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SwiperOptions } from '../../../../ui-elements/swiper/swiper.component';
+
 interface Discount {
   imageUrl?: string;
   title?: string;
@@ -35,6 +37,22 @@ export class DiscountsSliderComponent implements OnInit {
       imageUrl: 'assets/img/discounts/slide-9.jpg'
     }
   ];
+
+  options: SwiperOptions = {
+    slidesPerView: 'auto',
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: 'progressbar'
+    },
+    navigation: {
+      nextEl: '.swiper-custom-next',
+      prevEl: '.swiper-custom-prev',
+    },
+  };
 
   constructor() {
   }
