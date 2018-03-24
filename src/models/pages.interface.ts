@@ -1,9 +1,19 @@
+import { Discount } from './discounts.interface';
+
 export interface IndexPageResponse {
-  mainBanner?: any;
+  mainBanner: SingleBannerResponse;
   mainDirection: MainDirectionResponse;
-  discounts?: any;
-  ourTechnologies?: any;
+  discounts: Array<Discount>;
+  ourTechnologies: OurTechnologiesResponse;
   speakingOfClients?: any;
+}
+
+export interface SingleBannerResponse {
+  title: string;
+  text: string;
+  btnTitle?: string;
+  btnLnk?: string;
+  imgUrl?: string;
 }
 
 export interface MainDirectionResponse {
@@ -15,5 +25,16 @@ export interface MainDirectionResponse {
 export interface MainDirectionItem {
   name: string;
   routerLink: any[];
+  svg: string;
+}
+
+export interface OurTechnologiesResponse {
+  title: string;
+  subtitle?: string;
+  technology: Array<OurTechnology>;
+}
+
+export interface OurTechnology {
+  title: string;
   svg: string;
 }
