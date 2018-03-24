@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-// import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
 
-// import { IndexPageService } from './index-page.service';
+import { IndexPageService } from './index-page.service';
 
 import { ReviewsResponse } from 'models/social.interface';
 
@@ -10,7 +9,7 @@ import { ReviewsResponse } from 'models/social.interface';
   recentReviews?: ReviewsResponse;
 }*/
 
-// const PAGE_KEY = makeStateKey('index');
+const PAGE_KEY = makeStateKey('index');
 
 @Component({
   selector: 'app-index-page',
@@ -22,31 +21,21 @@ export class IndexPageComponent implements OnInit {
   indexPageData?: ReviewsResponse;
 
   constructor(
-    // private state: TransferState,
-    // private indexPage: IndexPageService,
-    private http: HttpClient) {
+    private state: TransferState,
+    private indexPage: IndexPageService) {
   }
 
   ngOnInit() {
 
-    /*this.indexPage.getRecentReview()
-      .subscribe(response => {
-        this.indexPageData = response;
-      });*/
+    this.indexPageData = this.state.get(PAGE_KEY, null as any);
 
-    // this.http.get<ReviewsResponse>('assets/mocks/recent-reviews.json')
-    //   .subscribe(result => console.log(result));
-
-    // this.indexPageData = this.state.get(PAGE_KEY, null as any);
-
-    /*if (!this.indexPageData) {
+    if (!this.indexPageData) {
       this.indexPage.getRecentReview()
         .subscribe(response => {
-          this.indexPageData = {};
-          this.indexPageData.recentReviews = response;
-          // this.state.set(PAGE_KEY, response as any);
+          this.indexPageData = response;
+          this.state.set(PAGE_KEY, response as any);
         });
-    }*/
+    }
   }
 
 }

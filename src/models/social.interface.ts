@@ -1,5 +1,5 @@
 export interface ReviewsResponse {
-  reviews: Array<Review>;
+  reviews?: Array<Review>;
   title?: string;
 }
 
