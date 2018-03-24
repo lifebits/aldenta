@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { UiElementsModule } from '../../ui-elements/ui-elements.module';
+import { PipesModule } from '../../pipes/pipes.module';
 
 import { IndexPageComponent } from './index-page.component';
 import { SingleBannerComponent } from './components/single-banner/single-banner.component';
@@ -18,7 +19,8 @@ import { IndexPageService } from './index-page.service';
   imports: [
     CommonModule,
     RouterModule,
-    UiElementsModule
+    UiElementsModule,
+    PipesModule
   ],
   declarations: [
     IndexPageComponent,

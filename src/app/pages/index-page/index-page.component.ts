@@ -3,11 +3,7 @@ import { TransferState, makeStateKey } from '@angular/platform-browser';
 
 import { IndexPageService } from './index-page.service';
 
-import { ReviewsResponse } from 'models/social.interface';
-
-/*interface IndexPageResponse {
-  recentReviews?: ReviewsResponse;
-}*/
+import { IndexPageResponse } from 'models/pages.interface';
 
 const PAGE_KEY = makeStateKey('index');
 
@@ -18,7 +14,7 @@ const PAGE_KEY = makeStateKey('index');
 })
 export class IndexPageComponent implements OnInit {
 
-  indexPageData?: ReviewsResponse;
+  indexPageData?: IndexPageResponse;
 
   constructor(
     private state: TransferState,
@@ -26,14 +22,12 @@ export class IndexPageComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.indexPageData = this.state.get(PAGE_KEY, null as any);
-
+    this.indexPageData = this.state.get(PAGE_KEY, null as IndexPageResponse);
     if (!this.indexPageData) {
-      this.indexPage.getRecentReview()
+      this.indexPage.getIndexPage()
         .subscribe(response => {
           this.indexPageData = response;
-          this.state.set(PAGE_KEY, response as any);
+          this.state.set(PAGE_KEY, response as IndexPageResponse);
         });
     }
   }
