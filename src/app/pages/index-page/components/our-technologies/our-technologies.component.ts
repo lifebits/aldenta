@@ -11,7 +11,7 @@ export class OurTechnologiesComponent implements OnInit {
 
   @Input() technologies?: OurTechnologiesResponse;
 
-  constructor() { console.log(this.technologies); }
+  constructor() { }
 
   ngOnInit() { }
 

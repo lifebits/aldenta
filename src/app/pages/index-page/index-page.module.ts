@@ -29,7 +29,7 @@ import { IndexPageService } from './index-page.service';
     DiscountsSliderComponent,
     OurTechnologiesComponent,
     SpeakingOfClientsComponent,
-    RecentReviewsSliderComponent
+    RecentReviewsSliderComponent,
   ],
   providers: [
     IndexPageService
