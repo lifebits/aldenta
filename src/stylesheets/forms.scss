@@ -1,0 +1,60 @@
+@import "./tools/colors";
+
+form {
+
+  &.base-md {
+    font-size: 1.2rem;
+
+    .radio-inline {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 30px;
+
+      input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      input:checked + label:before {
+        border-color: theme-colors('primary');
+      }
+
+      input:checked + label:after {
+        border-color: theme-colors('primary');
+        background-color: theme-colors('primary');
+      }
+
+      label {
+        position: relative;
+        padding: 0 0 0 35px;
+        cursor: pointer;
+
+        &:before {
+          position: absolute;
+          top: -2px;
+          left: 0;
+          content: "";
+          display: inline-block;
+          height: 22px;
+          width: 22px;
+          border: 2px solid #9a9a9a;
+          border-radius: 50%;
+        }
+
+        &:after {
+          position: absolute;
+          top: 4px;
+          left: 6px;
+          content: "";
+          display: inline-block;
+          height: 12px;
+          width: 12px;
+          border: 1px solid #9a9a9a;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+}

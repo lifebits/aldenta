@@ -9,7 +9,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
   contactForm = new FormGroup({
-    contactWay: new FormControl(null)
+    contactWay: new FormControl(null),
+    phoneNumber: new FormControl(null)
   });
 
   constructor() { }

@@ -6,7 +6,19 @@
   <div class="flex-row" style="margin-top: 40px;">
 
     <div style="width: 50%;">
-      qwerty
+      <form [formGroup]="contactForm" class="base-md">
+        <div class="radio-inline">
+          <input formControlName="contactWay" type="radio" value="call" id="select-call"/>
+          <label for="select-call">Позвонить мне</label>
+        </div>
+        <div class="radio-inline">
+          <input formControlName="contactWay" type="radio" value="map" id="select-map">
+          <label for="select-map">Хочу к вам прийти</label>
+        </div>
+        <div>
+          <input formControlName="phoneNumber" type="text"/>
+        </div>
+      </form>
     </div>
 
     <div style="width: 50%;">
