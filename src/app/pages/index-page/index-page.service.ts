@@ -4,8 +4,7 @@ import { Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { forkJoin } from 'rxjs/observable/forkJoin';
+import { Observable, forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { IndexPageResponse, MainDirectionResponse, SingleBannerResponse, OurTechnologiesResponse } from 'models/pages.interface';
