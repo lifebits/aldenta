@@ -1,6 +1,6 @@
 <section style="padding-bottom: 50px;">
   <h2>{{ mainDirections.title }}</h2>
-  <div [innerHTML]="mainDirections.text" class="h2-subtitle"></div>
+  <div [innerHTML]="mainDirections.text | safeHtml" class="h2-subtitle"></div>
   <div class="flex-row" style="margin-top: 40px;">
     <div *ngFor="let direction of mainDirections.directionList" class="wrap-direction">
       <div class="direction">
