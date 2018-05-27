@@ -39,22 +39,26 @@ export class IndexPageService {
   }
 
   getSingleBannerData(): Observable<SingleBannerResponse> {
-    const url = environment.baseApi + `/mocks/index-single-banner.json`;
+    // const url = environment.baseApi + `/mocks/index-single-banner.json`;
+    const url = environment.baseApi + `/banners/main`;
     return this.http.get<SingleBannerResponse>(url);
   }
 
   getMainDirections(): Observable<MainDirectionResponse> {
-    const url = environment.baseApi + '/mocks/index-directions.json';
+    // const url = environment.baseApi + '/mocks/index-directions.json';
+    const url = environment.baseApi + `/directions`;
     return this.http.get<MainDirectionResponse>(url);
   }
 
   getActiveDiscounts(): Observable<Discount[]> {
-    const url = environment.baseApi + '/mocks/discounts.json';
+    // const url = environment.baseApi + '/mocks/discounts.json';
+    const url = environment.baseApi + `/discounts`;
     return this.http.get<Discount[]>(url);
   }
 
   getOurTechnologies(): Observable<OurTechnologiesResponse> {
-    const url = environment.baseApi + '/mocks/index-our-technologies.json';
+    // const url = environment.baseApi + '/mocks/index-our-technologies.json';
+    const url = environment.baseApi + `/our_technologies`;
     return this.http.get<OurTechnologiesResponse>(url);
   }
 

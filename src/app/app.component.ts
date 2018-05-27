@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+/*import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 
-import { ReviewsResponse } from '../models/social.interface';
+import { ReviewsResponse } from '../models/social.interface';*/
 
 // const DOGS_KEY = makeStateKey('dogs');
 
@@ -13,28 +13,23 @@ import { ReviewsResponse } from '../models/social.interface';
 })
 export class AppComponent implements OnInit {
 
-  dogs?: any;
+  // dogs?: any;
 
   constructor(
-    private http: HttpClient,
-    private state: TransferState) {
+    /*private http: HttpClient,
+    private state: TransferState*/) {
   }
 
   ngOnInit() {
-    // this.dogs = this.state.get(DOGS_KEY, null as any);
+    /*this.dogs = this.state.get(DOGS_KEY, null as any);
     if (!this.dogs) {
-      /*this.http
+      this.http
         .get('https://dog.ceo/api/breeds/list/all')
         .subscribe(response => {
           this.dogs = response;
           this.state.set(DOGS_KEY, response as any);
-        });*/
-      /*this.http.get<ReviewsResponse>('http://localhost:3200/assets/mocks/recent-reviews.json')
-        .subscribe(response => {
-          this.dogs = response;
-          this.state.set(DOGS_KEY, response as any);
-        });*/
-    }
+        });
+    }*/
   }
 
 }
