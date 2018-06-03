@@ -6,6 +6,7 @@ import { IndexPageModule } from './index-page/index-page.module';
 import { ServicesPageModule } from './services-page/services-page.module';
 
 import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
+import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 
 @NgModule({
   imports: [
@@ -15,10 +16,12 @@ import { HeaderNavigationComponent } from './components/header-navigation/header
     ServicesPageModule
   ],
   declarations: [
-    HeaderNavigationComponent
+    HeaderNavigationComponent,
+    HeaderLogoComponent
   ],
   exports: [
-    HeaderNavigationComponent
+    HeaderNavigationComponent,
+    HeaderLogoComponent
   ]
 })
 export class PagesModule { }

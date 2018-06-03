@@ -1,0 +1,49 @@
+@import "stylesheets/tools/colors";
+
+.wrapper-logo {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  padding: 14px 0;
+}
+
+.light {
+  line-height: 1.2;
+  color: theme-colors('font', '200');
+}
+
+.dark {
+  line-height: 1.5;
+  color: theme-colors('font', '400');
+  font-weight: 600;
+}
+
+.address {
+  position: relative;
+  min-width: 240px;
+  height: 100%;
+  padding-left: 28px;
+  font-size: 1.05rem;
+  border-left: 1px solid #d3d3d3;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2px;
+    height: 100%;
+    width: 1px;
+    background-color: #f3f3f3;
+  }
+}
+
+.phone {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  min-width: 280px;
+
+  svg {
+    margin-left: 20px;
+  }
+}
