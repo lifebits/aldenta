@@ -5,10 +5,21 @@ form {
   &.base-md {
     font-size: 1.2rem;
 
+    input[type="text"] {
+      box-sizing: border-box;
+      min-width: 200px;
+      height: 42px;
+      line-height: 36px;
+      margin: 8px 0;
+      padding: 0 10px;
+    }
+
     .radio-inline {
       display: inline-flex;
       align-items: center;
       margin-right: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
 
       input {
         position: absolute;
