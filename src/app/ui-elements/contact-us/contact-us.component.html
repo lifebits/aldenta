@@ -3,21 +3,40 @@
   <h2>Нужна консультация?</h2>
   <div class="h2-subtitle">Запишитесь и мы ответим на ваши вопросы</div>
 
-  <div class="flex-row" style="margin-top: 40px;">
+  <div class="flex-row" style="margin-top: 30px;">
 
     <div style="width: 50%;">
-      <form [formGroup]="contactForm" class="base-md">
+      <form [formGroup]="contactForm" (submit)="onSubmit(contactForm)" class="base-md" style="width: 90%;">
+
         <div class="radio-inline">
-          <input formControlName="contactWay" type="radio" value="call" id="select-call"/>
+          <input formControlName="contactWay"
+            type="radio" value="call" id="select-call"
+          />
           <label for="select-call">Позвонить мне</label>
         </div>
         <div class="radio-inline">
-          <input formControlName="contactWay" type="radio" value="map" id="select-map">
+          <input formControlName="contactWay"
+            type="radio" value="map" id="select-map"
+          />
           <label for="select-map">Хочу к вам прийти</label>
         </div>
-        <div>
-          <input formControlName="phoneNumber" type="text"/>
+
+        <div style="margin: 10px 0;">
+          <div class="input-block">
+            <input formControlName="phoneNumber"
+              type="text" placeholder="Номер телефона на который позвонить"
+            />
+          </div>
+          <div class="input-block">
+            <input formControlName="clientName"
+              type="text" placeholder="Ваше имя"
+            />
+          </div>
         </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin: 10px 0;">
+          Отправить запрос
+        </button>
       </form>
     </div>
 

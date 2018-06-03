@@ -9,13 +9,18 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
   contactForm = new FormGroup({
-    contactWay: new FormControl(null),
-    phoneNumber: new FormControl(null)
+    contactWay: new FormControl('call'),
+    phoneNumber: new FormControl(null),
+    clientName: new FormControl(null)
   });
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit({value, valid}: {value: any, valid: boolean}) {
+    console.log(value);
   }
 
 }
