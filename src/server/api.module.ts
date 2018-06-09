@@ -20,6 +20,7 @@ export class ApiModule {
     this.app.get('/api/directions', (req, res) => res.json(ApiModule.readJsonFileSync('index-directions')));
     this.app.get('/api/discounts', (req, res) => res.json(ApiModule.readJsonFileSync('discounts')));
     this.app.get('/api/our_technologies', (req, res) => res.json(ApiModule.readJsonFileSync('index-our-technologies')));
+    this.app.get('/api/popular_issues', (req, res) => res.json(ApiModule.readJsonFileSync('index-popular-issues')));
   }
 
 }

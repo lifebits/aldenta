@@ -6,6 +6,7 @@ import { PopupMenuComponent } from './popup-menu/popup-menu.component';
 import { SwiperComponent } from './swiper/swiper.component';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PopularIssuesComponent } from './popular-issues/popular-issues.component';
 
 @NgModule({
   imports: [
@@ -15,12 +16,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   declarations: [
     PopupMenuComponent,
     SwiperComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PopularIssuesComponent
   ],
   exports: [
     PopupMenuComponent,
     SwiperComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PopularIssuesComponent
   ]
 })
 export class UiElementsModule { }

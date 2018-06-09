@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { IndexPageResponse, MainDirectionResponse, SingleBannerResponse, OurTechnologiesResponse } from 'models/pages.interface';
+import { IndexPageResponse, MainDirectionResponse, SingleBannerResponse, OurTechnologiesResponse,
+  PopularIssuesResponse } from 'models/pages.interface';
 import { Discount } from 'models/discounts.interface';
 import { ReviewsResponse } from 'models/social.interface';
 
@@ -24,15 +25,17 @@ export class IndexPageService {
       this.getSingleBannerData(),
       this.getMainDirections(),
       this.getActiveDiscounts(),
-      this.getOurTechnologies()
+      this.getOurTechnologies(),
+      this.getPopularIssues()
     ).pipe(
       map(response => {
-        const [ mainBanner, mainDirections, discounts, ourTech ] = response;
+        const [ mainBanner, mainDirections, discounts, ourTech, popularIssues ] = response;
         return {
           mainBanner: mainBanner,
           mainDirection: mainDirections,
           discounts: discounts,
-          ourTechnologies: ourTech
+          ourTechnologies: ourTech,
+          popularIssues: popularIssues
         };
       })
     );
@@ -65,6 +68,11 @@ export class IndexPageService {
   getRecentReview(): Observable<ReviewsResponse> {
     const url = environment.baseApi + '/mocks/recent-reviews.json';
     return this.http.get<ReviewsResponse>(url);
+  }
+
+  getPopularIssues(): Observable<PopularIssuesResponse> {
+    const url = environment.baseApi + `/popular_issues`;
+    return this.http.get<PopularIssuesResponse>(url);
   }
 
 }

@@ -6,6 +6,7 @@ export interface IndexPageResponse {
   discounts: Array<Discount>;
   ourTechnologies: OurTechnologiesResponse;
   speakingOfClients?: any;
+  popularIssues: PopularIssuesResponse;
 }
 
 export interface SingleBannerResponse {
@@ -37,4 +38,15 @@ export interface OurTechnologiesResponse {
 export interface OurTechnology {
   title: string;
   svg: string;
+}
+
+export interface PopularIssuesResponse {
+  title: string;
+  subtitle?: string;
+  popularIssues: Array<Issue>;
+}
+
+export interface Issue {
+  name: string;
+  text: string;
 }

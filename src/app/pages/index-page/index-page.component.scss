@@ -6,7 +6,7 @@
 }
 
 .second-section {
-  background-color: theme-colors('primary');
+  background: theme-colors('primary') url('/assets/img/texture_tooth_for_green.png');
 }
 
 .third-section {
@@ -15,7 +15,7 @@
 }
 
 .fourth-section {
-  background-color: theme-colors('secondary');
+  background: theme-colors('secondary') url('/assets/img/texture_tooth_for_yellow.png');
 }
 
 .sixth-section {
