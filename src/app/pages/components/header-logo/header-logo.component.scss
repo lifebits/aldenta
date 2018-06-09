@@ -9,13 +9,14 @@
 
 .light {
   line-height: 1.2;
+  font-weight: 300;
   color: theme-colors('font', '200');
 }
 
 .dark {
   line-height: 1.5;
+  font-weight: 400;
   color: theme-colors('font', '400');
-  font-weight: 600;
 }
 
 .address {
