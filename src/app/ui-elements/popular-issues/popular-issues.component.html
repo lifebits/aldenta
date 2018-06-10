@@ -1,6 +1,17 @@
 <section style="padding: 40px 0;">
-  <h2>У вас остались вопросы?</h2>
-  <div class="h2-subtitle">
-    Задайте вопрос нам или найдите больше информации в наших услушгах.
+  <h2>{{ popularIssues.title }}</h2>
+  <div [innerHTML]="popularIssues.subtitle | safeHtml" class="h2-subtitle"></div>
+  <div class="flex-row">
+    <div style="width: 50%;">
+      <ul class="issue-list">
+        <li *ngFor="let issue of popularIssues.popularIssues">
+          {{ issue.name }}
+        </li>
+      </ul>
+    </div>
+
+    <div style="width: 50%;">
+      Задайте вопрос
+    </div>
   </div>
 </section>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { PopularIssuesResponse } from 'models/pages.interface';
 
 @Component({
   selector: 'app-popular-issues',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popular-issues.component.scss']
 })
 export class PopularIssuesComponent implements OnInit {
+
+  @Input() popularIssues?: PopularIssuesResponse;
 
   constructor() { }
 
