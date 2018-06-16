@@ -1,0 +1,62 @@
+<section style="position: relative; padding: 60px 0; min-height: 200px;">
+  <div class="flex-row">
+
+    <div style="min-width: 340px;">
+      <div>
+        <img src="assets/img/logo-footer.png">
+      </div>
+      <ul class="navigation-list">
+        <li>Услуги</li>
+        <li *ngFor="let navigation of navigationList">
+          {{ navigation.title }}
+        </li>
+      </ul>
+    </div>
+
+    <div style="width: 100%;">
+      asd
+    </div>
+
+    <div style="min-width: 340px;">
+      <h2>Свяжитесь с нами:</h2>
+      <div style="margin: 40px 0;">
+        <div class="contact-item">
+          <app-badge value="1">
+          </app-badge>
+          <div class="contact-detail">
+            <div class="contact-title">Позвоните нам:</div>
+            <div class="contact-text">+7 (391) 253-68-63</div>
+          </div>
+        </div>
+
+        <div class="separator">
+          или
+        </div>
+
+        <div class="contact-item">
+          <app-badge value="2">
+          </app-badge>
+          <div class="contact-detail">
+            <div class="contact-title">Приезжайте по адресу:</div>
+            <div class="contact-text">Красноясрк, Ленина, 104</div>
+          </div>
+        </div>
+
+        <div class="separator">
+          или
+        </div>
+
+        <div class="contact-item">
+          <app-badge value="3">
+          </app-badge>
+          <div class="contact-detail">
+            <div class="contact-text">Напишите в чате</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

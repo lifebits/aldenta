@@ -1,0 +1,44 @@
+@import "stylesheets/tools/colors";
+
+.badge {
+  position: relative;
+  border-radius: 50%;
+
+  &.md {
+    width: 44px;
+    height: 44px;
+
+    .badge-value {
+      width: 26px;
+      height: 26px;
+      font-size: 1rem;
+    }
+  }
+
+  &.success {
+    background-color: theme-colors("primary", "400", $opacity: 0.2);
+
+    .badge-value {
+      background-color: theme-colors("primary");
+    }
+  }
+
+  .badge-value{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    min-width: .625rem;
+    height: .625rem;
+    line-height: normal;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: inherit;
+    color: white;
+  }
+
+}

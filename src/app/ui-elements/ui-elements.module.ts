@@ -9,6 +9,7 @@ import { SwiperComponent } from './swiper/swiper.component';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PopularIssuesComponent } from './popular-issues/popular-issues.component';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   imports: [
@@ -20,13 +21,15 @@ import { PopularIssuesComponent } from './popular-issues/popular-issues.componen
     PopupMenuComponent,
     SwiperComponent,
     ContactUsComponent,
-    PopularIssuesComponent
+    PopularIssuesComponent,
+    BadgeComponent
   ],
   exports: [
     PopupMenuComponent,
     SwiperComponent,
     ContactUsComponent,
-    PopularIssuesComponent
+    PopularIssuesComponent,
+    BadgeComponent
   ]
 })
 export class UiElementsModule { }

@@ -1,0 +1,78 @@
+.flex-row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+h2 {
+  padding-bottom: 0;
+  color: #cbcbcb;
+  line-height: 60px;
+}
+
+.navigation-list {
+  margin: 40px 0;
+  padding-left: 30px;
+  color: #cbcbcb;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  list-style-image: url("/assets/img/icons/footer-marker.png");
+
+  li {
+    margin: 14px 0;
+    padding-left: 18px;
+    letter-spacing: inherit;
+    cursor: pointer;
+  }
+}
+
+.separator {
+  position: relative;
+  padding: 14px 0;
+  color: #3d3d3d;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 43%;
+    height: 1px;
+    background-color: #3d3d3d;
+  }
+
+  &:after {
+    left: 0;
+  }
+
+  &:before {
+    right: 0;
+  }
+}
+
+.contact-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-detail {
+  margin-left: 20px;
+  font-weight: 300;
+
+  .contact-title {
+    color: #cbcbcb;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-text {
+    color: white;
+    font-size: 1.4rem;
+  }
+}

@@ -7,6 +7,7 @@ import { ServicesPageModule } from './services-page/services-page.module';
 
 import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
+import { FooterBaseComponent } from './components/footer-base/footer-base.component';
 
 @NgModule({
   imports: [
@@ -17,11 +18,13 @@ import { HeaderLogoComponent } from './components/header-logo/header-logo.compon
   ],
   declarations: [
     HeaderNavigationComponent,
-    HeaderLogoComponent
+    HeaderLogoComponent,
+    FooterBaseComponent
   ],
   exports: [
     HeaderNavigationComponent,
-    HeaderLogoComponent
+    HeaderLogoComponent,
+    FooterBaseComponent
   ]
 })
 export class PagesModule { }
