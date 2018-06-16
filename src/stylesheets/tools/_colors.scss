@@ -30,9 +30,9 @@ $theme-colors: (
 );
 
 $main-opacity: (
-	'light': 0.8,
- 'standart': 0.5,
-     'dark': 0.4,
+	'dark': 0.8,
+  'stadart': 0.5,
+  'light': 0.4,
 );
 
 @function theme-colors(
@@ -63,6 +63,6 @@ $main-opacity: (
 
 /*
 background-color: theme-colors('primary');
-background-color: theme-colors('primary', 'light');
-background-color: theme-colors('primary', $opacity: 'light');
+background-color: theme-colors('primary', '400', 'light');
+background-color: theme-colors('primary', '400', $opacity: 'light');
 */
