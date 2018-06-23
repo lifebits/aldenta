@@ -1,12 +1,14 @@
 <section style="padding-bottom: 50px;">
-  <h2>{{ mainDirections.title }}</h2>
-  <div [innerHTML]="mainDirections.text | safeHtml" class="h2-subtitle"></div>
+  <h2>Основные направления</h2>
+  <div class="h2-subtitle">
+    Подберите интересующую услугу или <a>запишитесь на консультацию</a>
+  </div>
   <div class="flex-row" style="margin-top: 40px;">
-    <div *ngFor="let direction of mainDirections.directionList" class="wrap-direction">
+    <div *ngFor="let direction of mainDirections" class="wrap-direction">
       <div class="direction">
-        <div [innerHTML]="direction.svg | safeHtml" class="icon"></div>
+        <div [innerHTML]="direction.svgLarge | safeHtml" class="icon"></div>
         <div>
-          <a [routerLink]="direction.routerLink">
+          <a [routerLink]="direction.routeLink">
             {{ direction.name }}
           </a>
         </div>

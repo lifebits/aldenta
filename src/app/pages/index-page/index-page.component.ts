@@ -15,7 +15,7 @@ const PAGE_KEY = makeStateKey('index');
 })
 export class IndexPageComponent implements OnInit {
 
-  indexPageData?: IndexPageResponse | any;
+  indexPageData?: IndexPageResponse;
 
   constructor(
     private state: TransferState,
@@ -26,12 +26,6 @@ export class IndexPageComponent implements OnInit {
   ngOnInit() {
     this.indexPageData = this.state.get(PAGE_KEY, null as IndexPageResponse);
     if (!this.indexPageData) {
-      /*this.indexPage.getSingleBannerData()
-        .subscribe(response => {
-          console.log(111, response);
-          this.indexPageData = response;
-          this.state.set(PAGE_KEY, response as any);
-        });*/
       this.indexPage.getIndexPage()
         .subscribe(response => {
           this.indexPageData = response;

@@ -9,8 +9,10 @@ import { map } from 'rxjs/operators';
 
 import { IndexPageResponse, MainDirectionResponse, SingleBannerResponse, OurTechnologiesResponse,
   PopularIssuesResponse } from 'models/pages.interface';
+import { ServiceNavigationItem } from 'models/services.interfaces';
 import { Discount } from 'models/discounts.interface';
 import { ReviewsResponse } from 'models/social.interface';
+
 
 @Injectable()
 export class IndexPageService {
@@ -47,10 +49,9 @@ export class IndexPageService {
     return this.http.get<SingleBannerResponse>(url);
   }
 
-  getMainDirections(): Observable<MainDirectionResponse> {
-    // const url = environment.baseApi + '/mocks/index-directions.json';
-    const url = environment.baseApi + `/directions`;
-    return this.http.get<MainDirectionResponse>(url);
+  getMainDirections(): Observable<ServiceNavigationItem[]> {
+    const url = environment.baseApi + `/services`;
+    return this.http.get<ServiceNavigationItem[]>(url);
   }
 
   getActiveDiscounts(): Observable<Discount[]> {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { MainDirectionResponse } from 'models/pages.interface';
+import { ServiceNavigationItem } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-main-directions',
@@ -9,7 +9,7 @@ import { MainDirectionResponse } from 'models/pages.interface';
 })
 export class MainDirectionsComponent implements OnInit {
 
-  @Input() mainDirections?: MainDirectionResponse;
+  @Input() mainDirections?: Array<ServiceNavigationItem>;
 
   constructor() { }
 

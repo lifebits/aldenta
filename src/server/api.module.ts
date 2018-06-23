@@ -17,7 +17,7 @@ export class ApiModule {
 
   initial(): void {
     this.app.get('/api/banners/main', (req, res) => res.json(ApiModule.readJsonFileSync('index-single-banner')));
-    this.app.get('/api/directions', (req, res) => res.json(ApiModule.readJsonFileSync('index-directions')));
+    this.app.get('/api/services', (req, res) => res.json(ApiModule.readJsonFileSync('services-navigation')));
     this.app.get('/api/discounts', (req, res) => res.json(ApiModule.readJsonFileSync('discounts')));
     this.app.get('/api/our_technologies', (req, res) => res.json(ApiModule.readJsonFileSync('index-our-technologies')));
     this.app.get('/api/popular_issues', (req, res) => res.json(ApiModule.readJsonFileSync('index-popular-issues')));

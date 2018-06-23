@@ -1,8 +1,9 @@
+import { ServiceNavigationItem } from './services.interfaces';
 import { Discount } from './discounts.interface';
 
 export interface IndexPageResponse {
   mainBanner: SingleBannerResponse;
-  mainDirection: MainDirectionResponse;
+  mainDirection: Array<ServiceNavigationItem>;
   discounts: Array<Discount>;
   ourTechnologies: OurTechnologiesResponse;
   speakingOfClients?: any;
