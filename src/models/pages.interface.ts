@@ -3,7 +3,7 @@ import { Discount } from './discounts.interface';
 
 export interface IndexPageResponse {
   mainBanner: SingleBannerResponse;
-  mainDirection: Array<ServiceNavigationItem>;
+  mainDirection?: Array<ServiceNavigationItem>;
   discounts: Array<Discount>;
   ourTechnologies: OurTechnologiesResponse;
   speakingOfClients?: any;

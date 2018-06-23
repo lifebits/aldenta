@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-/*import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 
-import { ReviewsResponse } from '../models/social.interface';*/
+import { PagesService } from 'app/pages/pages.service';
 
-// const DOGS_KEY = makeStateKey('dogs');
+import { ServiceNavigationItem } from 'models/services.interfaces';
+
+const PAGE_KEY = makeStateKey('mainNavigation');
 
 @Component({
   selector: 'app-root',
@@ -13,23 +14,23 @@ import { ReviewsResponse } from '../models/social.interface';*/
 })
 export class AppComponent implements OnInit {
 
-  // dogs?: any;
+  serviceNavigation?: Array<ServiceNavigationItem>;
 
   constructor(
-    /*private http: HttpClient,
-    private state: TransferState*/) {
+    private state: TransferState,
+    private pages: PagesService) {
   }
 
   ngOnInit() {
-    /*this.dogs = this.state.get(DOGS_KEY, null as any);
-    if (!this.dogs) {
-      this.http
-        .get('https://dog.ceo/api/breeds/list/all')
+    this.serviceNavigation = this.state.get(PAGE_KEY, null);
+    if (!this.serviceNavigation) {
+      this.pages.getServiceNavigationList()
         .subscribe(response => {
-          this.dogs = response;
-          this.state.set(DOGS_KEY, response as any);
+          console.log(222, response);
+          this.serviceNavigation = response;
+          this.state.set(PAGE_KEY, response);
         });
-    }*/
+    }
   }
 
 }

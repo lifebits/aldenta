@@ -6,7 +6,7 @@ export interface NavigationItem {
   svg?: SafeHtml;
 }
 
-export const MAIN_NAVIGATION_LIST: Array<NavigationItem> = [
+export const PAGE_NAVIGATION_LIST: Array<NavigationItem> = [
   {
     title: 'Рассрочка',
     link: ''

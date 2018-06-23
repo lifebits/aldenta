@@ -115,7 +115,7 @@
     },
     "components": []
   }, {
-    "id": "",
+    "id": "oral-hygiene",
     "name": "Профессиональная гигиена рта",
     "routeLink": ["services", "oral-hygiene"],
     "svgLarge": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 86 86'><defs><style></style><linearGradient id='Безымянный_градиент_25' x1='8397.59' y1='73.41' x2='8458.41' y2='12.59' gradientTransform='matrix(-1 0 0 1 8471 0)' gradientUnits='userSpaceOnUse'><stop offset='0' stop-color='#78bd40'/><stop offset='.5' stop-color='#fc0'/><stop offset='1' stop-color='#78bd40'/></linearGradient></defs><g id='Слой_2' data-name='Слой 2'><g id='Слой_1-2' data-name='Слой 1'><circle cx='43' cy='43' r='42' stroke-dasharray='2' stroke='url(#Безымянный_градиент_25)' stroke-width='2' fill='none' stroke-miterlimit='10'/><path d='M46.94 35.35a6.28 6.28 0 0 1-4.79-1C39.59 32.75 38.9 32 36 32s-7.86 0-7.86 9.84S33.67 68 38.65 68c1.15 0 1.21-.94 1.21-9.71 0-2.46 2.52-2.64 3.29-2.64 0 0 3-.39 3 4.17S45.6 67.93 47 68c3-.19 11.15-11.65 11.15-25.81.35-9.84-6-10.3-8.65-10.3a11.2 11.2 0 0 0-7 2.28' stroke='#262626' stroke-width='2' fill='none' stroke-miterlimit='10'/><path d='M77 52H63a51.7 51.7 0 0 0 1.31-11.49c.46-13.22-9.07-13.85-12.64-13.85s-7.3.22-9.4 2.07a30.12 30.12 0 0 0-8.78-1.86c-3.89 0-11.56.06-11.56 13.22A62 62 0 0 0 23.33 52H11' stroke='#ccc' stroke-width='4' fill='none' stroke-miterlimit='10'/><path d='M55 42.5a5.5 5.5 0 0 0-5.5 5.5 5.5 5.5 0 0 0-5.5-5.5 5.5 5.5 0 0 0 5.5-5.5 5.5 5.5 0 0 0 5.5 5.5zm-29-18a5.5 5.5 0 0 0-5.5 5.5 5.5 5.5 0 0 0-5.5-5.5 5.5 5.5 0 0 0 5.5-5.5 5.5 5.5 0 0 0 5.5 5.5z' fill='#262626'/></g></g></svg>",

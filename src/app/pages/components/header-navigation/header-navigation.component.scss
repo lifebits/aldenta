@@ -28,8 +28,15 @@ nav {
     align-items: center;
     border-bottom: 1px solid #dcdcdc;
 
-    svg {
-      margin: 0 8px;
+    .service-icon {
+      svg {
+        width:30px;
+        height:30px;
+        margin: 0 10px;
+      }
+    }
+
+    .svg-arrow {
       fill: #666666;
     }
 

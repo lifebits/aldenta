@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationItem, MAIN_NAVIGATION_LIST } from '../../pages.constants';
+import { NavigationItem, PAGE_NAVIGATION_LIST } from '../../pages.constants';
 
 @Component({
   selector: 'app-footer-base',
@@ -8,7 +8,7 @@ import { NavigationItem, MAIN_NAVIGATION_LIST } from '../../pages.constants';
 })
 export class FooterBaseComponent implements OnInit {
 
-  navigationList: Array<NavigationItem> = MAIN_NAVIGATION_LIST;
+  navigationList: Array<NavigationItem> = PAGE_NAVIGATION_LIST;
 
   constructor() { }
 
