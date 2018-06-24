@@ -1,9 +1,11 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-popup-menu',
   templateUrl: './popup-menu.component.html',
-  styleUrls: ['./popup-menu.component.scss']
+  styleUrls: ['./popup-menu.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PopupMenuComponent implements OnInit {
 
