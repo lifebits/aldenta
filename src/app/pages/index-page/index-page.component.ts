@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 
+import { PagesService } from '../pages.service';
 import { IndexPageService } from './index-page.service';
 
 import { IndexPageResponse } from 'models/pages.interface';
+import { ServiceNavigationItem } from 'models/services.interfaces';
 
 const PAGE_KEY = makeStateKey('index');
 
@@ -15,11 +17,13 @@ const PAGE_KEY = makeStateKey('index');
 })
 export class IndexPageComponent implements OnInit {
 
+  mainDirections?: Array<ServiceNavigationItem>;
   indexPageData?: IndexPageResponse;
 
   constructor(
     private state: TransferState,
     private http: HttpClient,
+    private pages: PagesService,
     private indexPage: IndexPageService) {
   }
 
@@ -32,6 +36,8 @@ export class IndexPageComponent implements OnInit {
           this.state.set(PAGE_KEY, response as IndexPageResponse);
         });
     }
+    this.pages.getServiceNavigationList()
+      .subscribe(list => this.mainDirections = list);
   }
 
 }

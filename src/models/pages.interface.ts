@@ -1,9 +1,7 @@
-import { ServiceNavigationItem } from './services.interfaces';
 import { Discount } from './discounts.interface';
 
 export interface IndexPageResponse {
   mainBanner: SingleBannerResponse;
-  mainDirection?: Array<ServiceNavigationItem>;
   discounts: Array<Discount>;
   ourTechnologies: OurTechnologiesResponse;
   speakingOfClients?: any;
@@ -16,18 +14,6 @@ export interface SingleBannerResponse {
   btnTitle?: string;
   btnLnk?: string;
   imgUrl?: string;
-}
-
-export interface MainDirectionResponse {
-  title?: string;
-  text?: string;
-  directionList: Array<MainDirectionItem>;
-}
-
-export interface MainDirectionItem {
-  name: string;
-  routerLink: any[];
-  svg: string;
 }
 
 export interface OurTechnologiesResponse {
