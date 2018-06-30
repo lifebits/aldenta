@@ -1,0 +1,36 @@
+@import "stylesheets/tools/colors";
+
+.component-wrapper {
+  position: relative;
+  min-height: 200px;
+  padding: 50px 0;
+  background: theme-colors('primary') url('/assets/img/texture_tooth_for_green.png');
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.flex-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 20px 20px;
+}
+
+.flex-item {
+  width: 100%;
+  height: 140px;
+  margin: 0 1px;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: white;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 20px auto 10px;
+}

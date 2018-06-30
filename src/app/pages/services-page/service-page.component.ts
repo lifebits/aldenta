@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PagesService } from '../pages.service';
+
+import { ServiceNavigationItem } from 'models/services.interfaces';
+
 @Component({
   selector: 'app-service-page',
   templateUrl: './service-page.component.html',
@@ -7,7 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicePageComponent implements OnInit {
 
-  constructor() { }
+  companyServices?: Array<ServiceNavigationItem>;
+
+  constructor(
+    private pages: PagesService) {
+
+    this.pages.getServiceNavigationList()
+      .subscribe(list => {
+        this.companyServices = list;
+        console.log(111, list);
+      });
+  }
 
   ngOnInit() {
   }

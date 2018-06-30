@@ -1,0 +1,9 @@
+<section class="component-wrapper">
+  <h2>Список наших услуг:</h2>
+  <div class="flex-row">
+    <div *ngFor="let service of services" class="flex-item">
+      <div [innerHTML]="service.svgLarge | safeHtml" class="icon"></div>
+      <span>{{ service.name }}</span>
+    </div>
+  </div>
+</section>
