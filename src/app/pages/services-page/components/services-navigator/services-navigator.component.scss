@@ -3,7 +3,7 @@
 .component-wrapper {
   position: relative;
   min-height: 200px;
-  padding: 50px 0;
+  padding: 70px 0;
   background: theme-colors('primary') url('/assets/img/texture_tooth_for_green.png');
 }
 
@@ -17,7 +17,7 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 20px 20px;
+  margin: 30px 60px;
 }
 
 .flex-item {
@@ -26,7 +26,14 @@ h2 {
   margin: 0 1px;
   font-size: 0.8rem;
   text-align: center;
+  color: #333333;
   background-color: white;
+
+  &.active, &:hover {
+    z-index: 10;
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
 }
 
 .icon {

@@ -19,7 +19,6 @@ export class ServicePageComponent implements OnInit {
     this.pages.getServiceNavigationList()
       .subscribe(list => {
         this.companyServices = list;
-        console.log(111, list);
       });
   }
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { UiElementsModule } from '../ui-elements/ui-elements.module';
 import { IndexPageModule } from './index-page/index-page.module';
@@ -15,6 +16,7 @@ import { PagesService } from './pages.service';
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     UiElementsModule,
     IndexPageModule,
     ServicesPageModule,
