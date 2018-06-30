@@ -72,13 +72,26 @@
     right: 100px;
   }
 
-  .swiper-slide-active {
+  .swiper-slide {
+
     .content-wrapper {
       color: white;
       border-color: white;
     }
+
     .slide-wrapper {
-      background-color: rgba(120,189,64,0.7) !important;
+      background-color: rgba(120,189,64,0.7);
+    }
+  }
+
+  .swiper-slide-active {
+
+    .content-wrapper {
+      color: black;
+      border-color: black;
+    }
+    .slide-wrapper {
+      background-color: transparent;
     }
   }
 }
