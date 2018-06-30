@@ -27,3 +27,5 @@ export const PAGE_NAVIGATION_LIST: Array<NavigationItem> = [
     link: ''
   }
 ];
+
+export const CALL_CENTER_PHONE = '+7 (391) 253-68-63';
