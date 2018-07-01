@@ -26,13 +26,22 @@ h2 {
   margin: 0 1px;
   font-size: 0.8rem;
   text-align: center;
+  text-decoration: none;
   color: #333333;
   background-color: white;
 
   &.active, &:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  &.active {
     z-index: 10;
     transform: scale(1.1);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  &:hover {
+    z-index: 11;
+    transform: scale(1.14);
   }
 }
 

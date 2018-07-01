@@ -1,12 +1,16 @@
-<section>
+<section class="services-navigator">
   <app-services-navigator
     [services]="companyServices">
   </app-services-navigator>
-  <p>
-    service-page navigation works!
-  </p>
 </section>
 
-<section>
-  <router-outlet></router-outlet>
+<section class="page-section">
+  <div class="content-block">
+    <div class="flex-row">
+      <div class="sub-services-navigator">
+
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </section>

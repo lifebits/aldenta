@@ -1,9 +1,11 @@
 <section class="component-wrapper">
   <h2>Список наших услуг:</h2>
   <div class="flex-row">
-    <a *ngFor="let service of services" [routerLink]="[service.routeLink[1]]" routerLinkActive="active" class="flex-item">
-      <div [innerHTML]="service.svgLarge | safeHtml" class="icon"></div>
-      <span>{{ service.name }}</span>
+    <a *ngFor="let service of services"
+      [routerLink]="[service.routeLink[1]]"
+      routerLinkActive="active" class="flex-item">
+        <div [innerHTML]="service.svgLarge | safeHtml" class="icon"></div>
+        <span>{{ service.name }}</span>
     </a>
   </div>
 </section>
