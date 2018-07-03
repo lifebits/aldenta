@@ -1,6 +1,6 @@
-# AldentaFront
+# SSR Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+Current Angular Version 6+
 
 ## Development server
 
