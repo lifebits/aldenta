@@ -13,12 +13,15 @@
     },
     "components": [
       {
+        "id": "therapy-inc1",
         "name": "Inc component 1",
         "routerLink": []
       }, {
+        "id": "therapy-inc2",
         "name": "Inc component 2",
         "routerLink": []
       }, {
+        "id": "therapy-inc3",
         "name": "Inc component 3",
         "routerLink": []
       }

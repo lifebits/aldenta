@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NavigationItem, PAGE_NAVIGATION_LIST } from '../../pages.constants';
-import { ServiceNavigationItem, LinkNode } from 'models/services.interfaces';
+import { ServiceNavigationItem, SubServiceNode } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-header-navigation',
@@ -16,7 +16,7 @@ export class HeaderNavigationComponent implements OnInit {
   pageList: Array<NavigationItem> = PAGE_NAVIGATION_LIST;
 
   selectedServiceName?: string;
-  serviceListLevelTwo?: Array<LinkNode>;
+  serviceListLevelTwo?: Array<SubServiceNode>;
 
   constructor() {}
 

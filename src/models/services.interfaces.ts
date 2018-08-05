@@ -5,10 +5,11 @@ export interface ServiceNavigationItem {
   svgLarge: string;
   svgSmall: string;
   discount?: ServiceDiscount;
-  components: Array<LinkNode>;
+  components: Array<SubServiceNode>;
 }
 
-export interface LinkNode {
+export interface SubServiceNode {
+  id: string;
   name: string;
   routerLink: Array<string>;
 }
