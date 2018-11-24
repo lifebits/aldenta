@@ -3,7 +3,8 @@ import { Application } from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 
-const JSON_FOLDER = join(process.cwd(), 'dist', 'browser', 'assets', 'mocks');
+// const JSON_FOLDER = join(process.cwd(), 'dist', 'browser', 'assets', 'mocks'); // for production
+const JSON_FOLDER = join(process.cwd(), 'src', 'assets', 'mocks'); // for develop
 
 export class ApiModule {
 
