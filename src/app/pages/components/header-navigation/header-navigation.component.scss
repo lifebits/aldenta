@@ -24,9 +24,12 @@ nav {
   }
 }
 
-ul {
-  padding: 0 10px;
-  list-style-type: none;
+.list-level-one {
+
+  ul {
+    padding: 0 10px;
+    list-style-type: none;
+  }
 
   li {
     position: relative;
@@ -37,7 +40,10 @@ ul {
     border-bottom: 1px solid #dcdcdc;
 
     .svg-arrow {
-      fill: #666666;
+      width:36px;
+      height:36px;
+      margin: 0 8px;
+      fill: #888888;
     }
 
     a {
@@ -55,7 +61,12 @@ ul {
       }
 
       a {
+        font-weight: 600;
         color: theme-colors('primary', '600');
+      }
+
+      .svg-arrow {
+        fill: #000000;
       }
     }
 
@@ -65,7 +76,7 @@ ul {
   }
 }
 
-.level-two-list {
+.list-level-two {
   position: absolute;
   top: 0;
   left: 100%;

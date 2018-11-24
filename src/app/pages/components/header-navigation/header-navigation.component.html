@@ -1,20 +1,24 @@
 <nav>
   <app-popup-menu style="margin-right: 10px;">
-    <ul>
-      <li *ngFor="let serviceItem of serviceList" (click)="onSelectPart(serviceItem)">
-        <div class="service-icon" [innerHTML]="serviceItem.svgSmall | safeHtml"></div>
-        <a>{{ serviceItem.name }}</a>
-        <svg class="svg-arrow" style="width:30px; height:30px; margin: 0 8px" viewBox="0 0 24 24">
-          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-        </svg>
-      </li>
-    </ul>
-    <div *ngIf="selectedServiceName" class="level-two-list">
+    <div class="list-level-one">
+      <ul>
+        <li *ngFor="let serviceItem of serviceList" (click)="onSelectPart(serviceItem)">
+          <div class="service-icon" [innerHTML]="serviceItem.svgSmall | safeHtml"></div>
+          <a>{{ serviceItem.name }}</a>
+          <svg class="svg-arrow" style="" viewBox="0 0 24 24">
+            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+          </svg>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="selectedServiceName" class="list-level-two">
       <div class="padding-container">
         <h2>{{ selectedServiceName }}</h2>
-        <div *ngFor="let component of serviceListLevelTwo">
-          {{ component.name }}
-        </div>
+        <ul>
+          <li *ngFor="let component of serviceListLevelTwo">
+            {{ component.name }}
+          </li>
+        </ul>
       </div>
     </div>
   </app-popup-menu>
