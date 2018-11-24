@@ -2,28 +2,30 @@ import { environment } from 'environments/environment';
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { TransferState, makeStateKey, StateKey } from '@angular/platform-browser';
 
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';
 
 import { ServiceNavigationItem } from 'models/services.interfaces';
 
-const STORAGE_KEY = makeStateKey('mainNavigation');
+const STORAGE_KEY: StateKey<ServiceNavigationItem[]> = makeStateKey('mainNavigation');
 
 @Injectable({
   providedIn: 'root'
 })
 export class PagesService {
 
-  private serviceListSource = new BehaviorSubject<ServiceNavigationItem[]>(null);
+  private serviceListSource = new BehaviorSubject<ServiceNavigationItem[]>(
+    this.state.get(STORAGE_KEY, null)
+  );
+  serviceList$ = this.serviceListSource.asObservable();
 
   constructor(
     private state: TransferState,
     private http: HttpClient) {
 
-    this.serviceListSource.next(this.state.get(STORAGE_KEY, null));
-    this.serviceListSource.asObservable()
+    this.serviceList$
       .pipe(
         filter(value => !value),
         switchMap(() => this.getBaseServices())
@@ -35,7 +37,7 @@ export class PagesService {
   }
 
   getServiceNavigationList(): Observable<ServiceNavigationItem[]> {
-    return this.serviceListSource.asObservable().pipe(
+    return this.serviceList$.pipe(
       filter(value => !!value)
     );
   }
