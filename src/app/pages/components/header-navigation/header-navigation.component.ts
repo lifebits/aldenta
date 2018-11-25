@@ -15,16 +15,18 @@ export class HeaderNavigationComponent implements OnInit {
 
   pageList: Array<NavigationItem> = PAGE_NAVIGATION_LIST;
 
-  selectedServiceName?: string;
-  serviceListLevelTwo?: Array<SubServiceNode>;
+  activeServiceIndex?: number;
+  activeServiceName?: string;
+  activeSubServiceList?: Array<SubServiceNode>;
 
   constructor() {}
 
   ngOnInit() {}
 
-  onSelectPart(part: ServiceNavigationItem): void {
-    this.selectedServiceName = part.name;
-    this.serviceListLevelTwo = part.components;
+  onSelectPart(part: ServiceNavigationItem, index: number): void {
+    this.activeServiceIndex = index;
+    this.activeServiceName = part.name;
+    this.activeSubServiceList = part.components;
   }
 
 }
