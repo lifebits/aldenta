@@ -13,16 +13,32 @@
     },
     "components": [
       {
-        "id": "therapy-inc1",
-        "name": "Inc component 1",
+        "id": "cariesTreatment",
+        "name": "Лечение кариеса",
         "routerLink": []
       }, {
-        "id": "therapy-inc2",
-        "name": "Inc component 2",
+        "id": "pulpitTreatment",
+        "name": "Лечение пульпита",
         "routerLink": []
       }, {
-        "id": "therapy-inc3",
-        "name": "Inc component 3",
+        "id": "periodontitTreatment",
+        "name": "Лечение периодонтита",
+        "routerLink": []
+      }, {
+        "id": "canalTreatment",
+        "name": "Лечение корневых каналов зубов",
+        "routerLink": []
+      }, {
+        "id": "restorationPosteriorTeeth",
+        "name": "Реставрация жевательных зубов",
+        "routerLink": []
+      }, {
+        "id": "restorationFrontTeeth",
+        "name": "Реставрация передних зубов",
+        "routerLink": []
+      }, {
+        "id": "pregnantDentistry",
+        "name": "Лечение зубов беременным",
         "routerLink": []
       }
     ]
