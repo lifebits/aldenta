@@ -1,5 +1,8 @@
+export type ServiceType = 'therapy' | 'surgery' | 'implantology' | 'orthopedics' | 'laser-dentistry' | 'periodontics' | 'orthodontics'
+  | 'aesthetic-dentistry' | 'oral-hygiene';
+
 export interface ServiceNavigationItem {
-  id: string;
+  type: ServiceType;
   name: string;
   routeLink: Array<string>;
   svgLarge: string;
