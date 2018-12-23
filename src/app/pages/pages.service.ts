@@ -5,9 +5,9 @@ import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey, StateKey } from '@angular/platform-browser';
 
 import { BehaviorSubject, Observable } from 'rxjs';
-import { filter, switchMap } from 'rxjs/operators';
+import { filter, switchMap, first, map } from 'rxjs/operators';
 
-import { ServiceNavigationItem } from 'models/services.interfaces';
+import { ServiceNavigationItem, ServiceType } from 'models/services.interfaces';
 
 const STORAGE_KEY: StateKey<ServiceNavigationItem[]> = makeStateKey('mainNavigation');
 
@@ -38,11 +38,20 @@ export class PagesService {
 
   getServiceNavigationList(): Observable<ServiceNavigationItem[]> {
     return this.serviceList$.pipe(
-      filter(value => !!value)
+      filter(value => !!value),
+      first()
     );
   }
 
-  getBaseServices(): Observable<ServiceNavigationItem[]> {
+  getService(type: ServiceType | any): Observable<ServiceNavigationItem> {
+    return this.serviceList$.pipe(
+      filter(value => !!value),
+      first(),
+      map(list => list.find((a => a.type === type)))
+    );
+  }
+
+  private getBaseServices(): Observable<ServiceNavigationItem[]> {
     const url = environment.baseApi + `/services`;
     return this.http.get<ServiceNavigationItem[]>(url);
   }
