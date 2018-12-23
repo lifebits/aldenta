@@ -1,0 +1,9 @@
+<div class="sub-services-navigator">
+  <ul>
+    <li *ngFor="let item of items">
+      <a [routerLink]="item.routerLink" routerLinkActive="active">
+        {{ item.name }}
+      </a>
+    </li>
+  </ul>
+</div>
