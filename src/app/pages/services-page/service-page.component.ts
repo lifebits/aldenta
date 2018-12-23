@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { PagesService } from '../pages.service';
 
-import { ServiceNavigationItem } from 'models/services.interfaces';
+import { ServiceNavigationItem, SubServiceNode } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-service-page',
@@ -17,12 +17,9 @@ export class ServicePageComponent implements OnInit {
     private pages: PagesService) {
 
     this.pages.getServiceNavigationList()
-      .subscribe(list => {
-        this.companyServices = list;
-      });
+      .subscribe(list => this.companyServices = list);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
