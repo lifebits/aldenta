@@ -1,3 +1,10 @@
-<p>
-  {{ part }} works!
-</p>
+<div class="flex-row">
+  <section style="width: 320px;">
+    <app-services-sub-navigator
+      [items]="subServiceList">
+    </app-services-sub-navigator>
+  </section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</div>

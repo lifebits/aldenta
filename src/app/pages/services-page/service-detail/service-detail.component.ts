@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { tap, switchMap } from 'rxjs/operators';
+
+import { PagesService } from '../../pages.service';
+
+import { SubServiceNode } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-service-detail',
@@ -9,16 +14,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ServiceDetailComponent implements OnInit {
 
   part?: string;
+  subServiceList?: Array<SubServiceNode>;
 
   constructor(
-    private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private pages: PagesService) {
   }
 
   ngOnInit() {
-    // this.router.navigate();
     this.route.paramMap
-      .subscribe(value => this.part = value.get('serviceName'));
+      .pipe(
+        tap(value => this.part = value.get('serviceName')),
+        switchMap(value => this.pages.getService(value.get('serviceName')))
+      )
+      .subscribe(service => this.subServiceList = service.components);
   }
 
 }
