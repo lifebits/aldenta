@@ -5,6 +5,7 @@ import { IndexPageComponent } from './pages/index-page/index-page.component';
 
 import { ServicePageComponent } from './pages/services-page/service-page.component';
 import { ServiceDetailComponent } from './pages/services-page/service-detail/service-detail.component';
+import { ServiceDetailDescriptionComponent } from './pages/services-page/service-detail-description/service-detail-description.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,21 @@ const routes: Routes = [
     path: 'services',
     component: ServicePageComponent,
     children: [
-      // { path: '', component: ServicePageComponent, pathMatch: 'full' },
-      { path: ':serviceName', component: ServiceDetailComponent }
+      {
+        path: ':serviceName',
+        component: ServiceDetailComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'consultation',
+            pathMatch: 'full',
+          },
+          {
+            path: ':servicePart',
+            component: ServiceDetailDescriptionComponent,
+          }
+        ]
+      }
     ]
   }
 ];
