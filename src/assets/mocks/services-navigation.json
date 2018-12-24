@@ -15,36 +15,36 @@
       {
         "id": "consultation",
         "name": "Консультация, первичный осмотр",
-        "routerLink": ["consultation"]
+        "routerLink": ["services", "therapy", "consultation"]
       },
       {
         "id": "cariesTreatment",
         "name": "Лечение кариеса",
-        "routerLink": ["cariesTreatment"]
+        "routerLink": ["services", "therapy", "cariesTreatment"]
       }, {
         "id": "pulpitTreatment",
         "name": "Лечение пульпита",
-        "routerLink": ["pulpitTreatment"]
+        "routerLink": ["services", "therapy", "pulpitTreatment"]
       }, {
         "id": "periodontitTreatment",
         "name": "Лечение периодонтита",
-        "routerLink": ["periodontitTreatment"]
+        "routerLink": ["services", "therapy", "periodontitTreatment"]
       }, {
         "id": "canalTreatment",
         "name": "Лечение корневых каналов зубов",
-        "routerLink": ["canalTreatment"]
+        "routerLink": ["services", "therapy", "canalTreatment"]
       }, {
         "id": "restorationPosteriorTeeth",
         "name": "Реставрация жевательных зубов",
-        "routerLink": ["restorationPosteriorTeeth"]
+        "routerLink": ["services", "therapy", "restorationPosteriorTeeth"]
       }, {
         "id": "restorationFrontTeeth",
         "name": "Реставрация передних зубов",
-        "routerLink": ["restorationFrontTeeth"]
+        "routerLink": ["services", "therapy", "restorationFrontTeeth"]
       }, {
         "id": "pregnantDentistry",
         "name": "Лечение зубов беременным",
-        "routerLink": ["pregnantDentistry"]
+        "routerLink": ["services", "therapy", "pregnantDentistry"]
       }
     ]
   }, {

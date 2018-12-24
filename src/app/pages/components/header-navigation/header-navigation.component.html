@@ -19,7 +19,9 @@
         <h3>{{ activeServiceName }}</h3>
         <ul>
           <li *ngFor="let component of activeSubServiceList">
-            <a>{{ component.name }}</a>
+            <a [routerLink]="component.routerLink" routerLinkActive="active">
+              {{ component.name }}
+            </a>
           </li>
         </ul>
       </div>
