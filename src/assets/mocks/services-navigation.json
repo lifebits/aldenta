@@ -16,8 +16,7 @@
         "id": "consultation",
         "name": "Консультация, первичный осмотр",
         "routerLink": ["services", "therapy", "consultation"]
-      },
-      {
+      }, {
         "id": "cariesTreatment",
         "name": "Лечение кариеса",
         "routerLink": ["services", "therapy", "cariesTreatment"]
@@ -34,6 +33,10 @@
         "name": "Лечение корневых каналов зубов",
         "routerLink": ["services", "therapy", "canalTreatment"]
       }, {
+        "id": "microscopicTreatment",
+        "name": "Лечение под микроскопом",
+        "routerLink": ["services", "therapy", "microscopicTreatment"]
+      },{
         "id": "restorationPosteriorTeeth",
         "name": "Реставрация жевательных зубов",
         "routerLink": ["services", "therapy", "restorationPosteriorTeeth"]
@@ -59,7 +62,29 @@
       "value": 20,
       "isPercent": true
     },
-    "components": []
+    "components": [
+      {
+        "id": "consultation",
+        "name": "Консультация, первичный осмотр",
+        "routerLink": ["services", "surgery", "consultation"]
+      }, {
+        "id": "toothExtraction",
+        "name": "Удаление зубов",
+        "routerLink": ["services", "surgery", "toothExtraction"]
+      }, {
+        "id": "wisdomToothExtraction",
+        "name": "Удаление зуба мудрости",
+        "routerLink": ["services", "surgery", "wisdomToothExtraction"]
+      }, {
+        "id": "plasticBridles",
+        "name": "Пластика уздечек",
+        "routerLink": ["services", "surgery", "plasticBridles"]
+      }, {
+        "id": "plasmaLifting",
+        "name": "Плазмалифтинг",
+        "routerLink": ["services", "surgery", "plasmaLifting"]
+      }
+    ]
   }, {
     "type": "implantology",
     "name": "Имплантология",
