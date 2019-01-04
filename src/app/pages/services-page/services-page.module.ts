@@ -9,6 +9,7 @@ import { ServiceDetailComponent } from './service-detail/service-detail.componen
 import { ServiceDetailDescriptionComponent } from './service-detail-description/service-detail-description.component';
 import { ServicesNavigatorComponent } from './components/services-navigator/services-navigator.component';
 import { ServicesSubNavigatorComponent } from './components/services-sub-navigator/services-sub-navigator.component';
+import { ServicesConsultationComponent } from './components/services-consultation/services-consultation.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ServicesSubNavigatorComponent } from './components/services-sub-navigat
     ServiceDetailComponent,
     ServiceDetailDescriptionComponent,
     ServicesNavigatorComponent,
-    ServicesSubNavigatorComponent
+    ServicesSubNavigatorComponent,
+    ServicesConsultationComponent
   ]
 })
 export class ServicesPageModule {

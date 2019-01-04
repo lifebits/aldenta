@@ -1,15 +1,15 @@
 import { environment } from 'environments/environment';
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { TransferState, makeStateKey, StateKey } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { filter, switchMap, first, map } from 'rxjs/operators';
 
 import { ServiceNavigationItem, ServiceType } from 'models/services.interfaces';
 
-const STORAGE_KEY: StateKey<ServiceNavigationItem[]> = makeStateKey('mainNavigation');
+const SERVICE_LIST_STORAGE_KEY: StateKey<ServiceNavigationItem[]> = makeStateKey('mainNavigation');
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ const STORAGE_KEY: StateKey<ServiceNavigationItem[]> = makeStateKey('mainNavigat
 export class PagesService {
 
   private serviceListSource = new BehaviorSubject<ServiceNavigationItem[]>(
-    this.state.get(STORAGE_KEY, null)
+    this.state.get(SERVICE_LIST_STORAGE_KEY, null)
   );
   serviceList$ = this.serviceListSource.asObservable();
 
@@ -32,7 +32,7 @@ export class PagesService {
       )
       .subscribe(response => {
         this.serviceListSource.next(response);
-        this.state.set(STORAGE_KEY, response);
+        this.state.set(SERVICE_LIST_STORAGE_KEY, response);
       });
   }
 
@@ -43,7 +43,7 @@ export class PagesService {
     );
   }
 
-  getService(type: ServiceType | any): Observable<ServiceNavigationItem> {
+  getService(type: ServiceType): Observable<ServiceNavigationItem> {
     return this.serviceList$.pipe(
       filter(value => !!value),
       first(),
