@@ -12,6 +12,7 @@ import { ServiceNavigationItem, SubServiceNode } from 'models/services.interface
 export class HeaderNavigationComponent implements OnInit {
 
   @Input() serviceList?: Array<ServiceNavigationItem>;
+  navigationIsActive = false;
 
   pageList: Array<NavigationItem> = PAGE_NAVIGATION_LIST;
 
@@ -23,10 +24,18 @@ export class HeaderNavigationComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSelectPart(part: ServiceNavigationItem, index: number): void {
+  onSelectPart(part: ServiceNavigationItem, index: number) {
     this.activeServiceIndex = index;
     this.activeServiceName = part.name;
     this.activeSubServiceList = part.components;
+  }
+
+  checkPopUpActiveStatus(value: boolean) {
+    this.navigationIsActive = value;
+  }
+
+  closeNavigation() {
+    this.navigationIsActive = false;
   }
 
 }

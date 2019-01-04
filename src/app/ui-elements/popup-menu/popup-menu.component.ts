@@ -1,4 +1,6 @@
-import { Component, OnInit, HostListener, ElementRef, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import {
+  Component, Input, Output, EventEmitter, OnInit, HostListener, ElementRef, ChangeDetectionStrategy, ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'app-popup-menu',
@@ -9,7 +11,8 @@ import { Component, OnInit, HostListener, ElementRef, ChangeDetectionStrategy, V
 })
 export class PopupMenuComponent implements OnInit {
 
-  isActive?: boolean;
+  @Input() isActive?: boolean;
+  @Output() changeActiveStatus = new EventEmitter<boolean>();
 
   constructor(
     private elementRef: ElementRef) {
@@ -26,6 +29,7 @@ export class PopupMenuComponent implements OnInit {
 
   toggleActiveStatus(): void {
     this.isActive = !this.isActive;
+    this.changeActiveStatus.emit(this.isActive);
   }
 
 }
