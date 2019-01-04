@@ -4,6 +4,7 @@ export type ServiceType = 'therapy' | 'surgery' | 'implantology' | 'orthopedics'
 export interface ServiceNavigationItem {
   type: ServiceType;
   name: string;
+  title: string;
   routeLink: Array<string>;
   svgLarge: string;
   svgSmall: string;

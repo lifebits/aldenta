@@ -4,7 +4,7 @@ import { tap, switchMap } from 'rxjs/operators';
 
 import { PagesService } from '../../pages.service';
 
-import { SubServiceNode } from 'models/services.interfaces';
+import { SubServiceNode, ServiceType } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-service-detail',
@@ -13,7 +13,7 @@ import { SubServiceNode } from 'models/services.interfaces';
 })
 export class ServiceDetailComponent implements OnInit {
 
-  part?: string;
+  serviceTitle?: string;
   subServiceList?: Array<SubServiceNode>;
 
   constructor(
@@ -24,10 +24,13 @@ export class ServiceDetailComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .pipe(
-        tap(value => this.part = value.get('serviceName')),
-        switchMap(value => this.pages.getService(value.get('serviceName')))
+        // tap(value => this.serviceTitle = value.get('serviceName') as ServiceType),
+        switchMap(value => this.pages.getService(value.get('serviceName') as ServiceType))
       )
-      .subscribe(service => this.subServiceList = service.components);
+      .subscribe(service => {
+        this.serviceTitle = service.title;
+        this.subServiceList = service.components;
+      });
   }
 
 }

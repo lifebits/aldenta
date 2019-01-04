@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { PagesService } from '../../pages.service';
+
 @Component({
   selector: 'app-service-detail-description',
   templateUrl: './service-detail-description.component.html',
@@ -10,7 +12,9 @@ export class ServiceDetailDescriptionComponent implements OnInit {
 
   part?: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private pages: PagesService) { }
 
   ngOnInit() {
     this.route.paramMap
