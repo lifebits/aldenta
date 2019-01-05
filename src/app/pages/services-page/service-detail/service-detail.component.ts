@@ -16,6 +16,8 @@ export class ServiceDetailComponent implements OnInit {
   serviceTitle?: string;
   subServiceList?: Array<SubServiceNode>;
 
+  // может группу хранить тут?
+
   constructor(
     private route: ActivatedRoute,
     private pages: PagesService) {
@@ -25,7 +27,7 @@ export class ServiceDetailComponent implements OnInit {
     this.route.paramMap
       .pipe(
         // tap(value => this.serviceTitle = value.get('serviceName') as ServiceType),
-        switchMap(value => this.pages.getService(value.get('serviceName') as ServiceType))
+        switchMap(value => this.pages.getServiceGroup(value.get('serviceName') as ServiceType))
       )
       .subscribe(service => {
         this.serviceTitle = service.title;

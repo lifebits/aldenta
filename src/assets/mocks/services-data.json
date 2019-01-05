@@ -1,0 +1,24 @@
+[
+  {
+    "id": "therapy",
+    "title": "Терапевтическая стоматология",
+    "components": [
+      {
+        "name": "consultation",
+        "title": "Консультация, первичный осмотр",
+        "mainDescription": ""
+      }
+    ]
+  },
+  {
+    "id": "surgery",
+    "title": "Хирургическая стоматология",
+    "components": [
+      {
+        "name": "consultation",
+        "title": "Консультация, первичный осмотр",
+        "mainDescription": ""
+      }
+    ]
+  }
+]
