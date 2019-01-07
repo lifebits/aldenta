@@ -1,6 +1,9 @@
-<app-services-consultation>
-</app-services-consultation>
+<section *ngIf="service">
+  <app-service-cost
+    [serviceName]="service.title">
+  </app-service-cost>
 
-<p>
-  {{ part }}
-</p>
+  <p>
+    {{ part }}
+  </p>
+</section>

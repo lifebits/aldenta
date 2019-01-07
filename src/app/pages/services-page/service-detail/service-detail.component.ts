@@ -26,14 +26,13 @@ export class ServiceDetailComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .pipe(
-        // switchMap(value => this.pages.getNavigationForServiceGroup(value.get('serviceName') as ServiceType)),
         switchMap(value => forkJoin(
           this.pages.getNavigationForServiceGroup(value.get('serviceName') as ServiceType),
           this.pages.getServiceGroup(value.get('serviceName') as ServiceType)
         ))
       )
       .subscribe(([ serviceGroupNavData, serviceGroup ]) => {
-        console.log('service group', serviceGroupNavData);
+        console.log('change service group: ', serviceGroupNavData);
         this.serviceTitle = serviceGroup.title;
         this.subServiceList = serviceGroupNavData.components;
       });

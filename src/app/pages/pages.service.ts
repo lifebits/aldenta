@@ -85,19 +85,9 @@ export class PagesService {
   getService(serviceName: string): Observable<ServiceDescription> {
     console.log('getService: ', this.activeServiceGroup, serviceName);
     return this.getServiceGroup().pipe(
-      map(serviceGroup => serviceGroup.components.find(a => a.name === serviceName))
+      map(serviceGroup => serviceGroup.components.find(a => a.name === serviceName)),
+      // filter(value => !!value),
     );
-
-    /*return this.servicesData$.pipe(
-      filter(value => !!value),
-      first(),
-      map(list => {
-        return list
-          .find(a => a.id === this.activeServiceGroup)
-          .components
-          .find(a => a.name === serviceName);
-      })
-    );*/
   }
 
   private getServiceNavigation(): Observable<ServiceNavigationItem[]> {

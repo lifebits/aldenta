@@ -14,9 +14,7 @@ import { ServiceDescription } from 'models/services.interfaces';
 export class ServiceDetailDescriptionComponent implements OnInit {
 
   part?: string;
-  // service?: ServiceDescription;
-
-  serviceGroup?: string;
+  service?: ServiceDescription;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,13 +25,11 @@ export class ServiceDetailDescriptionComponent implements OnInit {
       .pipe(
         tap(params => this.part = params.get('servicePart')),
         switchMap(params => this.pages.getService(params.get('servicePart'))),
-        filter(value => !!value)
       )
       .subscribe(value => {
         console.log(555, value);
-        this.serviceGroup = value.title;
+        this.service = value;
       });
-      // .subscribe(params => this.part = params.get('servicePart'));
   }
 
 }
