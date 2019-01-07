@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { tap, switchMap } from 'rxjs/operators';
+
+import { forkJoin } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 import { PagesService } from '../../pages.service';
 
@@ -16,8 +18,6 @@ export class ServiceDetailComponent implements OnInit {
   serviceTitle?: string;
   subServiceList?: Array<SubServiceNode>;
 
-  // может группу хранить тут?
-
   constructor(
     private route: ActivatedRoute,
     private pages: PagesService) {
@@ -26,12 +26,16 @@ export class ServiceDetailComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .pipe(
-        // tap(value => this.serviceTitle = value.get('serviceName') as ServiceType),
-        switchMap(value => this.pages.getServiceGroup(value.get('serviceName') as ServiceType))
+        // switchMap(value => this.pages.getNavigationForServiceGroup(value.get('serviceName') as ServiceType)),
+        switchMap(value => forkJoin(
+          this.pages.getNavigationForServiceGroup(value.get('serviceName') as ServiceType),
+          this.pages.getServiceGroup(value.get('serviceName') as ServiceType)
+        ))
       )
-      .subscribe(service => {
-        this.serviceTitle = service.title;
-        this.subServiceList = service.components;
+      .subscribe(([ serviceGroupNavData, serviceGroup ]) => {
+        console.log('service group', serviceGroupNavData);
+        this.serviceTitle = serviceGroup.title;
+        this.subServiceList = serviceGroupNavData.components;
       });
   }
 

@@ -4,7 +4,7 @@ export type ServiceType = 'therapy' | 'surgery' | 'implantology' | 'orthopedics'
 export interface ServiceNavigationItem {
   type: ServiceType;
   name: string;
-  title: string;
+  // title: string;
   routeLink: Array<string>;
   svgLarge: string;
   svgSmall: string;
@@ -23,4 +23,16 @@ export interface ServiceDiscount {
   title: string;
   value: number;
   isPercent: boolean;
+}
+
+export interface ServiceGroupDescription {
+  id: string;
+  title: string;
+  components: Array<ServiceDescription>;
+}
+
+export interface ServiceDescription {
+  name: string;
+  title: string;
+  mainDescription: string;
 }

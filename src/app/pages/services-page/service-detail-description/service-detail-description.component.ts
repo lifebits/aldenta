@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { tap, switchMap, filter } from 'rxjs/operators';
+
 import { PagesService } from '../../pages.service';
+import { ServiceDescription } from 'models/services.interfaces';
 
 @Component({
   selector: 'app-service-detail-description',
@@ -11,6 +14,9 @@ import { PagesService } from '../../pages.service';
 export class ServiceDetailDescriptionComponent implements OnInit {
 
   part?: string;
+  // service?: ServiceDescription;
+
+  serviceGroup?: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,7 +24,16 @@ export class ServiceDetailDescriptionComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap
-      .subscribe(params => this.part = params.get('servicePart'));
+      .pipe(
+        tap(params => this.part = params.get('servicePart')),
+        switchMap(params => this.pages.getService(params.get('servicePart'))),
+        filter(value => !!value)
+      )
+      .subscribe(value => {
+        console.log(555, value);
+        this.serviceGroup = value.title;
+      });
+      // .subscribe(params => this.part = params.get('servicePart'));
   }
 
 }
