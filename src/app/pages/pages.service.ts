@@ -27,7 +27,8 @@ export class PagesService {
   );
   servicesData$ = this.servicesDataSource.asObservable();
 
-  activeServiceGroup?: string;
+  private activeServiceGroupSource = new BehaviorSubject(null);
+  activeServiceGroup$ = this.activeServiceGroupSource.asObservable();
 
   constructor(
     private state: TransferState,
@@ -35,12 +36,12 @@ export class PagesService {
 
     forkJoin(
       this.servicesNavigationList$.pipe(
-        filter(value => !value),
+        filter(value => !value), // ???
         switchMap(() => this.getServiceNavigation()),
         tap(response => this.setServiceNavigation(response)),
       ),
       this.servicesData$.pipe(
-        filter(value => !value),
+        filter(value => !value), // ???
         switchMap(() => this.getServicesData()),
         tap(response => this.setServiceData(response))
       )
@@ -65,7 +66,7 @@ export class PagesService {
   }
 
   getNavigationForServiceGroup(groupName: ServiceType): Observable<ServiceNavigationItem> {
-    this.activeServiceGroup = groupName;
+    this.activeServiceGroupSource.next(groupName);
     return this.servicesNavigationList$.pipe(
       filter(value => !!value),
       first(),
@@ -74,7 +75,7 @@ export class PagesService {
   }
 
   getServiceGroup(groupName?: ServiceType): Observable<ServiceGroupDescription> {
-    const serviceGroupName = groupName || this.activeServiceGroup;
+    const serviceGroupName = groupName || this.activeServiceGroupSource.getValue();
     return this.servicesData$.pipe(
       filter(value => !!value),
       first(),
@@ -83,7 +84,7 @@ export class PagesService {
   }
 
   getService(serviceId: string): Observable<ServiceDescription> {
-    console.log('getService: ', this.activeServiceGroup, serviceId);
+    console.log('getService: ', this.activeServiceGroupSource.getValue(), serviceId);
     return this.getServiceGroup().pipe(
       map(serviceGroup => serviceGroup.components.find(a => a.id === serviceId)),
     );
