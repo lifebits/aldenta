@@ -82,11 +82,10 @@ export class PagesService {
     );
   }
 
-  getService(serviceName: string): Observable<ServiceDescription> {
-    console.log('getService: ', this.activeServiceGroup, serviceName);
+  getService(serviceId: string): Observable<ServiceDescription> {
+    console.log('getService: ', this.activeServiceGroup, serviceId);
     return this.getServiceGroup().pipe(
-      map(serviceGroup => serviceGroup.components.find(a => a.name === serviceName)),
-      // filter(value => !!value),
+      map(serviceGroup => serviceGroup.components.find(a => a.id === serviceId)),
     );
   }
 

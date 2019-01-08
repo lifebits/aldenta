@@ -32,7 +32,8 @@ export interface ServiceGroupDescription {
 }
 
 export interface ServiceDescription {
+  id: string;
   name: string;
-  title: string;
   mainDescription: string;
+  doctorsActions: Array<string>;
 }
