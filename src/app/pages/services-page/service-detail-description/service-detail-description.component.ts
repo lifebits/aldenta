@@ -21,7 +21,18 @@ export class ServiceDetailDescriptionComponent implements OnInit {
     private pages: PagesService) { }
 
   ngOnInit() {
-    this.route.paramMap
+    this.route.url
+      .pipe(
+        switchMap(() => this.route.paramMap),
+        tap(params => this.part = params.get('servicePart')),
+        switchMap(params => this.pages.getService(params.get('servicePart')))
+      )
+      .subscribe(value => {
+        console.log(888, value);
+        this.service = value;
+      });
+
+    /*this.route.paramMap
       .pipe(
         tap(params => this.part = params.get('servicePart')),
         switchMap(params => this.pages.getService(params.get('servicePart'))),
@@ -29,7 +40,7 @@ export class ServiceDetailDescriptionComponent implements OnInit {
       .subscribe(value => {
         console.log(555, value);
         this.service = value;
-      });
+      });*/
   }
 
 }
