@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   selector: 'app-service-main-description',
   templateUrl: './service-main-description.component.html',
   styleUrls: ['./service-main-description.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ServiceMainDescriptionComponent implements OnInit {
 

@@ -11,6 +11,7 @@ import { ServicesNavigatorComponent } from './components/services-navigator/serv
 import { ServicesSubNavigatorComponent } from './components/services-sub-navigator/services-sub-navigator.component';
 import { ServiceCostComponent } from './components/service-cost/service-cost.component';
 import { ServiceMainDescriptionComponent } from './components/service-main-description/service-main-description.component';
+import { ServiceDoctorsActionsComponent } from './components/service-doctors-actions/service-doctors-actions.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ServiceMainDescriptionComponent } from './components/service-main-descr
     ServicesNavigatorComponent,
     ServicesSubNavigatorComponent,
     ServiceCostComponent,
-    ServiceMainDescriptionComponent
+    ServiceMainDescriptionComponent,
+    ServiceDoctorsActionsComponent
   ]
 })
 export class ServicesPageModule {
