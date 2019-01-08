@@ -1,11 +1,11 @@
 <div class="flex-row">
-  <section style="width: 320px;">
+  <section style="min-width: 320px;">
     <app-services-sub-navigator
       [items]="subServiceList">
     </app-services-sub-navigator>
   </section>
 
-  <section style="margin: 10px 30px;">
+  <section style="width: 100%; margin: 10px 0 10px 30px;">
     <h1>{{ serviceTitle }}</h1>
     <router-outlet></router-outlet>
   </section>

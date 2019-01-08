@@ -1,0 +1,53 @@
+@import "stylesheets/tools/colors";
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 42px;
+  width: 160px;
+  min-width: 160px;
+  color: theme-colors('primary', '400');
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: white;
+  border: 1px solid theme-colors('primary', '400');
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.cost-display {
+  position: relative;
+  width: 100%;
+  margin-left: 40px;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: #808080;
+
+  b {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #000000;
+  }
+}
+
+.dynamic-link {
+  position: relative;
+  min-width: 168px;
+  width: 168px;
+  height: 56px;
+  background-image: url("/assets/img/installments.png");
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("/assets/img/installments_hover.png");
+  }
+}

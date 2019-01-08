@@ -1,7 +1,12 @@
 <section *ngIf="service">
   <app-service-cost
-    [serviceName]="service.title">
+    [serviceName]="service.title"
+    [serviceCost]="300">
   </app-service-cost>
+
+  <div
+    class="dashed-separator" style="margin: 30px 0;">
+  </div>
 
   <p>
     {{ part }}

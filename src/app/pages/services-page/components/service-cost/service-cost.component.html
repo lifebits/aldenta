@@ -1,6 +1,15 @@
 <h2>
   {{ serviceName || 'Заголовок не получен' }}
 </h2>
-<p>
-  service-cost works!
-</p>
+<div class="flex-row">
+  <button>
+    Записаться
+  </button>
+  <div class="cost-display">
+    <span>Стоимость: </span>
+    <span>
+      <b>{{ serviceCost }}₽</b>
+    </span>
+  </div>
+  <a class="dynamic-link"></a>
+</div>
